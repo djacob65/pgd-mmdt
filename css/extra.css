@@ -1,0 +1,68 @@
+/*h1, h2, h3
+{
+    color:#2980B9!important;
+}*/
+
+h1 {text-align:left; color:#337ab7}
+h1 {text-align:left; color:#fff}*/
+h2 {text-align:left; color:#c52d0d}
+h3 {text-align:left; color:#337ab7}
+h4 {text-align:left; color:#388e3c}
+
+em {font-size:16px;}
+
+ul li {font-size:.8rem;}
+
+img { max-width: 1200px; }
+
+.decal { position:relative; left: 50px; }
+
+/* To avoid repetition of title of page as first list item */
+/*
+li.toctree-l2:first-child {
+    display: none;
+}
+*/
+
+/* ipython notebooks overflow in x direction */
+#notebook-container
+{
+    width:100%;
+}
+.wy-nav-content {
+    max-width: none;
+}
+
+/* search text is white from theme.css of RTD - but why? hav to investigate?*/
+input[type="text"] {
+    color:black;
+  }
+
+/* dark blue on hover over links not very visible on side bars, so... */
+a:hover,
+a:focus {
+  color: #e07f25!important;
+}
+
+p.plegend {
+    line-height: 1.2; 
+    font-size: smaller;
+    font-style: italic;
+    margin: 0 0 0 0;
+}
+
+p.center {
+    text-align: center;
+}
+
+p.justify {
+    text-align: justify;
+}
+
+p { text-align: justify; }
+
+
+.extra-hide-more { display: none; }	
+.extra-show-more {  display: inline; }
+.extra-hide-js { display: none; }	
+.extra-show-js {  display: inline; }

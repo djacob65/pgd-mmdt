@@ -1,0 +1,992 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Maggot, Metadata aggregation on data storage">
+      
+      
+        <meta name="author" content="Daniel Jacob">
+      
+      
+      
+        <link rel="prev" href="../terminology/">
+      
+      
+        <link rel="next" href="../mapping/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Maggot - Vocabulary - Maggot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/pdfextra.css">
+    
+      <link rel="stylesheet" href="../../css/lightbox.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vocabulary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Maggot" class="md-header__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maggot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Maggot - Vocabulary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Maggot" class="md-nav__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Maggot
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorial/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Quick tutorial
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quick tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/describe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Entry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Definition files
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Definition files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Vocabulary
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vocabulary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json-ld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON-LD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oai-pmh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAI-PMH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dictionaries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dictionaries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../publish/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Publication
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Publication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publish/dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publish/zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="vocabulary">Vocabulary<a class="headerlink" href="#vocabulary" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="vocabulary_1">Vocabulary<a class="headerlink" href="#vocabulary_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In this section we expose the full extent of the possibilities concerning the vocabulary in Maggot.</li>
+<li>Choosing the type of vocabulary and how to enter it depends entirely on what you put in the <a href="../terminology">terminology definition file</a>. However, some approaches require a little technicality by writing small scripts based on <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, but nothing too serious. You can always take an already ready-made script and modify only the part that concerns your focus.</li>
+</ul>
+<p><br></p>
+<p><strong>1</strong> -  <strong>Vocabulary based on a list of terms fixed in advance</strong> (<em>checbox with feature open=0</em>)</p>
+<ul>
+<li>List of well-chosen and limited Control Vocabulary e.g according to a reference e.g. Data Document Initiative.</li>
+</ul>
+<p><center>
+<a href="../../images/vocabulary_fig1.png" data-lightbox="fig1"><img src="../../images/vocabulary_fig1.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>2</strong> - <strong>Vocabulary open for addition</strong> (<em>checkbox with feature open=1</em>)</p>
+<ul>
+<li>allows you to collect the desired <em>Control Vocabulary</em> (CV) from users. In order to initiate the list, you can put some terms in the <em>predefined terms</em> column of the terminology definition file.</li>
+</ul>
+<p><center>
+<a href="../../images/vocabulary_fig2.png" data-lightbox="fig2"><img src="../../images/vocabulary_fig2.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>3</strong> - <strong>Vocabulary based on a web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> in a text field</strong> (<em>textbox</em>)</p>
+<ul>
+<li>The <a href="https://en.wikipedia.org/wiki/Web_API" target="_blank">web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr></a> is defined in a <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> file with the same name as the assigned variable (here <em>cities</em>) and must present under <em>web/js/autocomplete</em>. For example, to enter a French city you can use the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> <a href="https://geo.api.gouv.fr/decoupage-administratif" target="_blank">geo.api.gouv.fr</a>. See <a href="https://github.com/inrae/pgd-mmdt/blob/main/web/js/autocomplete/cities.js" target="_blank">cities.js</a></li>
+</ul>
+<p><center>
+<a href="../../images/vocabulary_fig3.png" data-lightbox="fig3"><img src="../../images/vocabulary_fig3.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>4</strong> - <strong>Vocabulary based on a dictionary with multiple selection</strong> (<em>multiselect</em>) </p>
+<ul>
+<li><a href="../../dictionaries">Dictionaries</a> allow you to record multiple information necessary to define an entity, such as the names of people or even the funders. These information, once entered and saved in a file called a dictionary. Based on a very simple JavaScript retrieving the complete list of items included in the dictionary, thus creating a sort of internal <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>, we can fill a Maggot field by  autocompletion related to a search for these items.</li>
+<li>The JavaScript file must be named <em><strong>dico.js</strong></em> and be present under <em><strong>web/cvlist/<em>dico</em>/</strong></em> where <em><strong>dico</strong></em> is the name of the dictionary. See for instance <em><a href="https://github.com/inrae/pgd-mmdt/tree/main/web/cvlist/people/people.js" target="_blank">people.js</a></em></li>
+</ul>
+<p><center>
+<a href="../../images/vocabulary_fig4.png" data-lightbox="fig4"><img src="../../images/vocabulary_fig4.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>5</strong> - <strong>Multi-select vocabulary, based on an <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> managed by Twitter's Typeahead library.</strong> (<em>multiselect</em>) </p>
+<ul>
+<li>
+<p>Maggot embeds <a href="https://github.com/twitter/typeahead.js/blob/master/doc/jquery_typeahead.md" target="_blank">Twitter's Typeahead library</a> making it relatively easy for a data manager to implement a new vocabulary from its web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>. With the help of this library, this allows users to select a term from a list of vocabulary terms within a drop-down list. The list of terms has been pre-selected based on the first letters entered in the “Search for value” box. This list is dynamically refreshed when letters are added or modified. So, unlike a single call to the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> returning the entire list of terms in memory, which can take a very long time to load, the calls are made dynamically on the basis of a portion of a word (3 letters minimum by default), limiting the number of terms to retrieve. Thus this makes use very fluid.</p>
+</li>
+<li>
+<p>To implement an <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>-based web service, it is necessary to create two scripts (<em>&lt;ws&gt;_typeahead.js</em> and <em>&lt;wstype&gt;.inc</em>) which will each be used at one stage of the process as shown in the following figure:</p>
+</li>
+</ul>
+<p><center>
+<a href="../../images/vocabulary_fig7.png" data-lightbox="fig7"><img src="../../images/vocabulary_fig7.png" width="600px"></a>
+</center></p>
+<ol>
+<li>
+<p><em>&lt;ws&gt;_typeahead.js</em> : This file corresponds to the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> call when entering vocabulary using Twitter's Typeahead library. The prefix <em>&lt;ws&gt;</em> standing for web service, must be positioned so as to correspond to the name of the service indicated in the <em>CVname</em> column of the mapping file (see <a href="../mapping">mapping</a>) as well as to the corresponding value for the '<em>ws</em>' attribute in the column '<em>features</em>' of the terminology definition file (see <a href="../terminology">definitions</a>). This file must then be placed under the <em>web/js/autocomplete</em> directory. You will find a <a href="https://github.com/inrae/pgd-mmdt/blob/main/web/js/autocomplete/template_typeahead.js" target="_blank">template file</a> in this directory.</p>
+</li>
+<li>
+<p><em>&lt;wstype&gt;.inc</em> : This file corresponds to the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> call while metadata crosswalks processus and based on the mapping file (<a href="../mapping"><em>web/conf/mapping.txt</em></a>).The prefix <em>&lt;wstype&gt;</em> standing for web service type, must be positioned so as to correspond to the type of the service indicated in the <em>CVtype</em> column of the mapping file. This file must then be placed under the <em>web/inc/mapping/</em> directory. You will find a <a href="https://github.com/inrae/pgd-mmdt/blob/main/web/inc/mapping/template.inc" target="_blank">template file</a> in this directory.</p>
+</li>
+</ol>
+<p><br></p>
+<ul>
+<li>By defaut, Maggot already provides some vocaburay web services implemented in this way such as the ontology portals based on <a href="https://ontoportal.org/" target="_blank">OntoPortal</a>, the <a href="https://skosmos.org/" target="_blank">SKOSMOS</a> thesauri and the <a href="https://www.ebi.ac.uk/ols4" target="_blank">EMBL-EBI Ontology Lookup Service</a>. The figure below shows the configuration in the terminology definition file and the corresponding screenshots for each vocabulary.</li>
+</ul>
+<p><center>
+<a href="../../images/vocabulary_fig7b.png" data-lightbox="fig7b"><img src="../../images/vocabulary_fig7b.png" width="800px"></a>
+</center></p>
+<ol>
+<li>
+<p><a href="https://agroportal.lirmm.fr/" target="_blank">AgroPortal</a> and <a href="https://bioportal.bioontology.org/" target="_blank">BioPortal</a> are both based on <a href="https://ontoportal.org/" target="_blank">OntoPortal</a> which is a generic technology to build ontology repositories or semantic artefact catalogues.</p>
+</li>
+<li>
+<p><a href="https://skosmos.org/" target="_blank">SKOSMOS</a> is a web tool facilitating the posting of controlled vocabulary online in the form of a <a href="https://en.wikipedia.org/wiki/Thesaurus_(information_retrieval)" target="_blank">thesaurus</a> according to the <a href="https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System" target="_blank">SKOS</a> data model. It offers a navigation interface as well as a web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>.</p>
+</li>
+<li>
+<p><a href="https://www.ebi.ac.uk/ols4" target="_blank">EMBL-EBI Ontology Lookup Service</a> is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. You can browse the ontologies through the website as well as programmatically via the OLS <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>.</p>
+</li>
+</ol>
+<p>Note: we also support the <a href="https://semanticlookup.zbmed.de/ols/index" target="_blank">Terminology Service for NFDI4Health</a> given that it is also based on OLS.</p>
+<p><br></p>
+<ul>
+<li>Here is, for example, the implementation of the <a href="https://thesaurus.inrae.fr/thesaurus-inrae/en/" target="_blank">INRAE Thesaurus</a>, a web service based on <a href="https://skosmos.org/" target="_blank">SKOSMOS</a>. The figure below shows in more details how to fill in the definition files linked to the two scripts necessary for implementing the web service :</li>
+</ul>
+<p><center>
+<a href="../../images/vocabulary_fig7c.png" data-lightbox="fig7b"><img src="../../images/vocabulary_fig7c.png" width="800px"></a>
+</center>
+<br></p>
+<ul>
+<li>
+<p>Links to the two scripts :</p>
+<ul>
+<li><a href="https://github.com/inrae/pgd-mmdt/blob/main/web/js/autocomplete/VO_typeahead.js" target="_blank">web/js/autocomplete/VO_typeahead.js</a></li>
+<li><a href="https://github.com/inrae/pgd-mmdt/blob/main/web/inc/mapping/skosmos.inc" target="_blank">web/inc/mapping/skosmos.inc</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      INRAE, 2022-2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../js/jquery-2.1.1.min.js"></script>
+      
+        <script src="../../js/lightbox.min.js"></script>
+      
+        <script src="../../js/mermaid.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

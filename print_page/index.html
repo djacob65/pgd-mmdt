@@ -1,0 +1,1993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Maggot, Metadata aggregation on data storage">
+      
+      
+        <meta name="author" content="Daniel Jacob">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Maggot Documentation - Maggot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+      <link rel="stylesheet" href="../css/pdfextra.css">
+    
+      <link rel="stylesheet" href="../css/lightbox.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Maggot" class="md-header__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maggot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Maggot Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Maggot" class="md-nav__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Maggot
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quick tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quick tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/describe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Entry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Definition files
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Definition files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/json-ld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON-LD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/oai-pmh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAI-PMH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dictionaries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dictionaries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Publication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Publication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish/dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish/zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div id="print-site-page" class="">
+        <section id="print-site-cover-page">
+            
+<div>
+
+    
+        <h1>Maggot</h1>
+    
+
+</div>
+
+
+<table>
+
+    
+    <tr>
+        <td>Description</td>
+        <td>Maggot, Metadata aggregation on data storage</td>
+    </tr>
+    
+
+    
+    <tr>
+        <td>Author(s)</td>
+        <td>Daniel Jacob</td>
+    </tr>
+    
+
+    
+
+    
+    <tr>
+        <td>Copyright</td>
+        <td>INRAE, 2022-2024</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+        </section>
+        
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index"><h1 id="index-home">Home<a class="headerlink" href="#index-home" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<p><img alt="" src="../images/logo.png" />
+<center></p>
+<h2 style="color: darkviolet;">An ecosystem for producing and sharing metadata</h2>
+<p><img src="../images/overview.png" width="1000px">
+</center>
+<br></p>
+<h3 id="index-foster-good-data-management-with-data-sharing-in-mind">Foster good data management, with data sharing in mind<a class="headerlink" href="#index-foster-good-data-management-with-data-sharing-in-mind" title="Permanent link">&para;</a></h3>
+<p>Sharing descriptive <a href="https://www.opendatasoft.com/en/glossary/metadata/" target="_blank">Metadata</a> is the first essential step towards <a href="https://en.wikipedia.org/wiki/Open_scientific_data" target="_blank">Open Scientific Data</a>. With this in mind, Maggot was specifically designed to annotate datasets by creating a metadata file to attach to the storage space. Indeed, it allows users to easily add descriptive metadata to datasets produced within a collective of people (research unit, platform, multi-partner project, etc.). This approach fits perfectly into a data management plan as it addresses the issues of data organization and documentation, data storage and frictionless metadata sharing within this same collective and beyond.</p>
+<hr />
+<h3 id="index-main-features-of-maggot">Main features of Maggot<a class="headerlink" href="#index-main-features-of-maggot" title="Permanent link">&para;</a></h3>
+<p>The main functionalities of Maggot were established according to a well-defined need (See <a href="#about-background">Background</a>).</p>
+<ol>
+<li>Documente with <a href="https://www.opendatasoft.com/en/glossary/metadata/" target="_blank">Metadata</a> your datasets produced within a collective of people, thus making it possible :<ul>
+<li>to answer <a href="../images/DMP_fig.png" data-lightbox="fig8">certain questions</a> of the <a href="https://en.wikipedia.org/wiki/Data_management_plan" target="_blank">Data Management Plan (DMP)</a> concerning the organization, documentation, storage and sharing of data in the data storage space, </li>
+<li>to meet certain data and metadata requirements, listed for example by the <a href="https://open-research-europe.ec.europa.eu/for-authors/data-guidelines" target="_blank">Open Research Europe</a> in accordance with the <a href="https://open-research-europe.ec.europa.eu/for-authors/data-guidelines#fairdata" target="_blank">FAIR principles</a>.</li>
+</ul>
+</li>
+<li>Search datasets by their metadata<ul>
+<li>Indeed, the descriptive metadata thus produced can be associated with the corresponding data directly in the storage space then it is possible to perform a search on the metadata in order to find one or more sets of data. Only descriptive metadata is accessible by default.</li>
+</ul>
+</li>
+<li>Publish the metadata of datasets along with their data files into an <a href="https://open-research-europe.ec.europa.eu/for-authors/data-guidelines#approvedrepositories" target="_blank">Europe-approved repository</a></li>
+</ol>
+<p><em>See a short <a href="https://inrae.github.io/pgd-mmdt/pdf/MAGGOT_Presentation_Jan2024.pdf?download=false" target="_blank">Presentation</a> and <a href="https://inrae.github.io/pgd-mmdt/pdf/MAGGOT_Poster_May2024.pdf?download=false" target="_blank">Poster</a> for a quick overview</em>.</p>
+<p><br></p>
+<h3 id="index-overview-of-the-different-stages-of-metadata-management">Overview of the different stages of metadata management<a class="headerlink" href="#index-overview-of-the-different-stages-of-metadata-management" title="Permanent link">&para;</a></h3>
+<p><center><img src="../images/overview_steps.png" width="600px"><br>
+<strong><em>Note:</em></strong>  <em>The step numbers indicated in the figure correspond to the different points developed below</em>
+</center></p>
+<p><strong>1</strong> - First you must define all the <a href="https://www.opendatasoft.com/en/glossary/metadata/" target="_blank">metadata</a> that will be used to describe your datasets.
+<a href="#javascript:;" class="extra-js extra-show-js">&nbsp;&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.75.75 0 0 1 1.06 0"/></svg></span></a><span class="extra-more extra-hide-more">
+All metadata can be defined using a single file (in <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> format, therefore using a spreadsheet). This is a unavoidable step because both input and search interfaces are completely generated from these definition files, defining in this way each of the fields along with their <a href="../images/terminology_types.png" data-lightbox="fig0">input type</a> and also the associated Controlled Vocabulary (<a href="https://en.wikipedia.org/wiki/Ontology_(information_science)" target="_blank">ontology</a>, <a href="https://en.wikipedia.org/wiki/Thesaurus_(information_retrieval)" target="_blank">thesaurus</a>, dictionary, list of fixed terms). The metadata proposed by default was mainly established according to the <a href="https://ddialliance.org/" target="_blank">DDI</a> (Data Documentation Initiative) <a href="https://en.wikipedia.org/wiki/Metadata_standard" target="_blank">metadata schema</a>. This schema also largely corresponds to that adopted by the <a href="https://dataverse.org/" target="_blank">Dataverse</a> software. See the <a href="#definitions-terminology">Terminology Definition</a> section.
+</span><a href="#javascript:;" class="extra-js-2 extra-hide-js">&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.22 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.75.75 0 0 1-1.06 0"/></svg></span> </a></p>
+<p><strong>2</strong> - Entering metadata will be greatly facilitated by the use of <a href="#dictionaries">dictionaries</a>.
+<a href="#javascript:;" class="extra-js extra-show-js">&nbsp;&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.75.75 0 0 1 1.06 0"/></svg></span></a><span class="extra-more extra-hide-more">
+The dictionaries offered by default are: <i><a href="../images/dico1.png" data-lightbox="fig7">people</a></i>, <i><a href="../images/dico9.png" data-lightbox="fig9">funders</a></i>, <i><a href="../images/dico8.png" data-lightbox="fig8">data producers</a></i>, as well as a <i><a href="../images/dico7.png" data-lightbox="fig3">vocabulary</a></i> dictionary allowing you to mix ontologies and thesauri from several sources. Each of these dictionaries allows users, by entering a name by <abbr title="feature in which an application predicts the rest of a word a user is typing">autocompletion</abbr>, to associate information which will then be added when exporting the metadata either to a remote repository, or for harvesting the metadata. Thus this information, once entered into a dictionary, will not need to be re-entered again.
+</span><a href="#javascript:;" class="extra-js-2 extra-hide-js">&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.22 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.75.75 0 0 1-1.06 0"/></svg></span> </a></p>
+<p><strong>3</strong> - The web interface for entering metadata is entirely built on the basis of <a href="#definitions">definition files</a>. 
+<a href="#javascript:;" class="extra-js extra-show-js">&nbsp;&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.75.75 0 0 1 1.06 0"/></svg></span></a><span class="extra-more extra-hide-more">
+The metadata are distributed according to the different sections chosen, each constituting a tab (see <a href="../images/entry_fig2.png" data-lightbox="fig5">screenshot</a>). Mandatory fields are marked with a red star and must be documented in order to be able to generate the metadata file. The entry of metadata governed by a controlled vocabulary is done by <abbr title="feature in which an application predicts the rest of a word a user is typing">autocompletion</abbr> from term lists (<i>dictionary, thesaurus or ontology</i>). We can also define external resources (URL links) relating to documents, publications or other related data. Maggot thus becomes a hub for your datasets connecting different resources, local and external. Once the mandatory fields (at least) and other recommended fields (at best) have been entered, the metadata file can be generated in <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> format.
+</span><a href="#javascript:;" class="extra-js-2 extra-hide-js">&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.22 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.75.75 0 0 1-1.06 0"/></svg></span> </a></p>
+<p><strong>4</strong> - The file generated in <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> format must be placed in the <a href="#infrastructure">storage space</a> reserved for this purpose. 
+<a href="#javascript:;" class="extra-js extra-show-js">&nbsp;&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.75.75 0 0 1 1.06 0"/></svg></span></a><span class="extra-more extra-hide-more">
+The role played by this metadata file can be seen as a README file adapted for machines, but also readable by humans. With an internal structure, it offers coherence and consistency of information that a simple README file with a completely free and therefore unstructured text format does not allow. Furthermore, the central idea is to use the storage space as a local data repository, so that the metadata should go to the data and not the other way around.
+</span><a href="#javascript:;" class="extra-js-2 extra-hide-js">&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.22 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.75.75 0 0 1-1.06 0"/></svg></span> </a></p>
+<p><strong>5</strong> - A search of the datasets can thus be carried out on the basis of the metadata. 
+<a href="#javascript:;" class="extra-js extra-show-js">&nbsp;&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.75.75 0 0 1 1.06 0"/></svg></span></a><span class="extra-more extra-hide-more">
+Indeed, all the <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> metadata files are scanned and parsed according to a fixed time interval (30 min) then loaded into a database. This allows you to perform searches based on predefined metadata. The search form, in a compact shape, is almost the same as the entry form (see a <a href="../images/search_fig.png" data-lightbox="fig6">screenshot</a>). Depending on the search criteria, a list of data sets is provided, with for each of them a link pointing to the detailed sheet.
+</span><a href="#javascript:;" class="extra-js-2 extra-hide-js">&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.22 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.75.75 0 0 1-1.06 0"/></svg></span> </a></p>
+<p><strong>6</strong> - The detailed metadata sheet provides all the metadata divided by section. 
+<a href="#javascript:;" class="extra-js extra-show-js">&nbsp;&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.75.75 0 0 1 1.06 0"/></svg></span></a><span class="extra-more extra-hide-more">Unfilled metadata does not appear by default. When a URL can be associated with information (ORCID, Ontology, web site, etc.), you can click on it to go to the corresponding link. Likewise, it is possible to follow the associated link on each of the resources. From this sheet, you can also export the metadata according to different schemata (Dataverse, Zenodo, <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr>-LD). See <a href="../images/metadata_fig0.png" data-lightbox="fig7">screenshot 1</a> &amp; <a href="../images/metadata_fig1.png" data-lightbox="fig4">screenshot 2</a>.
+</span><a href="#javascript:;" class="extra-js-2 extra-hide-js">&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.22 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.75.75 0 0 1-1.06 0"/></svg></span> </a></p>
+<p><strong>7</strong> - Finally, once you have decided to <a href="#publish">publish your metadata</a> with your data, you can choose the repository 
+<a href="#javascript:;" class="extra-js extra-show-js">&nbsp;&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12.78 5.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.75.75 0 0 1 1.06 0"/></svg></span></a><span class="extra-more extra-hide-more">that suits you (currently repositories based on <a href="https://dataverse.org/" target="_blank">Dataverse</a> and <a href="https://www.openaire.eu/zenodo-guide" target="_blank">Zenodo</a> are supported).
+</span><a href="#javascript:;" class="extra-js-2 extra-hide-js">&nbsp; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.22 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.75.75 0 0 1-1.06 0"/></svg></span> </a></p>
+<p><br></p>
+<h3 id="index-additional-key-points">Additional key points<a class="headerlink" href="#index-additional-key-points" title="Permanent link">&para;</a></h3>
+<ul>
+<li><p>Being able to generate descriptive metadata from the start of a project or study without waiting for all the data to be acquired or processed, nor for the moment when one wish to publish data, thus respecting the <a href="https://www.reading.ac.uk/research-services/research-data-management/about-research-data-management/the-research-data-lifecycle" target="_blank">research data lifecycle</a> as best as possible. <a href="#chats-chat2" target="_blank">Read more</a>.</p></li>
+<li><p>The implementation of the tool requires involving all data stakeholders upstream (definition of the metadata schema, vocabularies, targeted data repositories, etc.); everyone has their role: <a href="https://www.opendatasoft.com/en/glossary/data-steward/" target="_blank">data manager/data steward</a> on one side but also <a href="https://www.opendatasoft.com/en/glossary/data-producer/" target="_blank">scientists and data producers</a> on the other. <a href="#chats-chat1" target="_blank">Read more</a>.</p></li>
+<li><p>A progressive rise towards an increasingly <a href="https://pitt.libguides.com/metadatadiscovery/controlledvocabularies" target="_blank">controlled and standardized vocabulary</a> is not only possible but even encouraged. First we can start with a simple vocabulary dictionary used locally and grouping together domain vocabularies. Then we can consider the creation of a thesaurus with or without mapping to ontologies. The promotion of ontologies must also be done gradually by selecting those which are truly relevant for the collective. A tool like Maggot makes it easy to implement them (See <a href="#definitions-vocabulary">Vocabulary</a>). <a href="#chats-chat3" target="_blank">Read more</a>.</p></li>
+</ul>
+<p><br><br></p>
+<hr />
+<p><a href="https://www.inrae.fr/en" target="_blank"><img alt="Inrae" src="../images/inrae_logo.png" /></a></p></section><section class="print-page" id="tutorial"><h1 id="tutorial-quick-tutorial">Quick tutorial<a class="headerlink" href="#tutorial-quick-tutorial" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="tutorial-quick-tutorial_1">Quick tutorial<a class="headerlink" href="#tutorial-quick-tutorial_1" title="Permanent link">&para;</a></h3>
+<p>This is a quick tutorial of how to use the Maggot tool in practice and therefore preferably targeting the end user. </p>
+<p>See a short <a href="https://inrae.github.io/pgd-mmdt/pdf/MAGGOT_Presentation_Jan2024.pdf?download=false" target="_blank">Presentation</a> and <a href="https://inrae.github.io/pgd-mmdt/pdf/MAGGOT_Poster_May2024.pdf?download=false" target="_blank">Poster</a> if you want to have a more general overview of the tool.</p>
+<p><br></p>
+<h4 id="tutorial-overview">Overview<a class="headerlink" href="#tutorial-overview" title="Permanent link">&para;</a></h4>
+<p>The Maggot tool is made up of several modules, all accessible from the main page by clicking on the corresponding part of the image as shown in the figure below:</p>
+<p><center>
+<a href="../images/tuto_fig1.png" data-lightbox="fig1"><img src="../images/tuto_fig1.png" width="800px"></a><br>
+</center></p>
+<dl>
+<dt><strong>Configuration</strong></dt>
+<dd><p>This module mainly concerns the <abbr title="The data manager is the person who sets the data policy, i.e. its implementation and governance.">data manager</abbr> and makes it possible to construct all the terminology definition files, i.e. the metadata and sources of associated vocabularies. See <a href="#definitions">Definition files</a> then <a href="#configuration">Configuration</a>.</p></dd>
+<dt><strong>Private Access</strong></dt>
+<dd><p>This module allows <abbr title="The data producer is the person who produced data and by extension has rights over it. She is also the one who has the best knowledge of it.">data producer</abbr> to temporarily protect access to metadata for the time necessary before sharing it within his collective. See <a href="#private-access">Private access key management</a>.</p></dd>
+<dt><strong>Dictionaries</strong></dt>
+<dd><p>This module allows <abbr title="The data producer is the person who produced data and by extension has rights over it. She is also the one who has the best knowledge of it.">data producer</abbr> to view content of all dictionaries. It also allows <abbr title="The data steward is the person who is responsible for data quality, and therefore has a role in data curation.">data steward</abbr> to edit their content. See <a href="#dictionaries">Dictionaries</a> for technical details only.</p></dd>
+<dt><strong>Metadata Entry</strong></dt>
+<dd><p>This is the main module allowing the <abbr title="The data producer is the person who produced data and by extension has rights over it. She is also the one who has the best knowledge of it.">data producer</abbr> to enter their metadata relating to a dataset. See the corresponding tutorial for <a href="#tutorial-describe">Metadata Entry</a>.</p></dd>
+<dt><strong>Search datasets</strong></dt>
+<dd><p>This module allows <abbr title="The user are the persons who want to use the data.">users</abbr> to search datasets based on the associated metadata, to see all the metadata and possibly to have access to the data itself. This obviously assumes that the metadata files have been deposited in the correct directory in the storage space dedicated to data management within your collective. See <a href="#infrastructure">Infrastructure</a>.</p></dd>
+<dt><strong>File Browser</strong></dt>
+<dd><p>This module gives <abbr title="The user are the persons who want to use the data.">users</abbr> access to a <a href="https://filebrowser.org/features" target="_blank">file browser</a> provided that the <abbr title="The data manager is the person who sets the data policy, i.e. its implementation and governance.">data manager</abbr> has installed it. See <a href="#installation-file-browser">File Browser</a></p></dd>
+<dt><strong>Publication</strong></dt>
+<dd><p>This module allows either the <abbr title="The data producer is the person who produced data and by extension has rights over it. She is also the one who has the best knowledge of it.">data producer</abbr> or the <abbr title="The data steward is the person who is responsible for data quality, and therefore has a role in data curation.">data steward</abbr> to publish the metadata with possibly the corresponding data within the suitable data repository. See <a href="#publish">Publication</a></p></dd>
+</dl>
+<p><br><br><br></p></section>
+                        <h1 class='nav-section-title' id='section-quick-tutorial'>
+                            Quick tutorial <a class='headerlink' href='#section-quick-tutorial' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="tutorial-describe"><h1 id="tutorial-describe-quick-tutorial">Quick tutorial<a class="headerlink" href="#tutorial-describe-quick-tutorial" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="tutorial-describe-metadata-entry">Metadata Entry<a class="headerlink" href="#tutorial-describe-metadata-entry" title="Permanent link">&para;</a></h3>
+<p>The figures are given here for illustration purposes but certain elements may be different for you given that this will depend on the configuration on your instance, in particular the choice of metadata, and the associated vocabulary sources.</p>
+<p>Indeed, the choice of vocabulary sources (ontologies, thesauri, dictionaries) as well as the choice of metadata fields to enter must in principle have been the subject of discussion between <abbr title="The data producers are the people who produced data and by extension have rights over it. They are also those who have the best knowledge of it.">data producers</abbr> and <abbr title="The data manager is the person who sets the data policy, i.e. its implementation and governance.">data manager</abbr> during the implementation of the Maggot tool in order to find the best compromise between the choice of sources and all the scientific fields targeted (see <a href="#definitions">Definition files</a>). However a later addition is always possible.</p>
+<p><br></p>
+<h4 id="tutorial-describe-overview">Overview<a class="headerlink" href="#tutorial-describe-overview" title="Permanent link">&para;</a></h4>
+<p>When you enter the metadata entry module you should see a page that looks like the figure below:</p>
+<p><center>
+<a href="../images/tuto2_fig1.png" data-lightbox="fig0"><img src="../images/tuto2_fig1.png" width="800px"></a><br>
+</center></p>
+<ul>
+<li>
+<p>All the fields (metadata) to be filled in are distributed between several tabs, also called sections. Each section tries to group together a set of fields relating to the same topic.</p>
+</li>
+<li>
+<p>You can reload a previously created metadata file. All form fields will then be initialized with the value(s) defined in the metadata file.</p>
+</li>
+<li>
+<p>You must at least complete the mandatory fields marked with a red star.</p>
+</li>
+<li>
+<p>It is possible to obtain help for each field to be completed. A mini-icon with a question mark is placed after each field label. By clicking on this icon, a web page opens with the focus on the definition of the corresponding field. This help should provide you with at least a definition of a field and, if necessary, instructions on how to fill it in. It should be noted that the quality of the documentation depends on each instance and its configuration.</p>
+</li>
+<li>
+<p>Once the form has been completed, even partially (at least those which are mandatory and marked with a red star), you can export your metadata in the form of a file. See <a href="#tutorial-metadata">Metadata File</a></p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="tutorial-describe-dictionaries">Dictionaries<a class="headerlink" href="#tutorial-describe-dictionaries" title="Permanent link">&para;</a></h4>
+<p><a href="#dictionaries">Dictionary-based metadata</a> (e.g. people's names) can easily be entered by <abbr title="feature in which an application predicts the rest of a word a user is typing.">autocomplete</abbr> in the 'Search value' box provided the name appears in the corresponding dictionary.</p>
+<p><center>
+<a href="../images/tuto2_fig2.png" data-lightbox="fig1"><img src="../images/tuto2_fig2.png" width="500px"></a><br>
+</center></p>
+<p>However, if the name does not yet appear in the dictionary, simply enter the full name (first name &amp; last name) in the main box, making sure to separate each name with a comma and then a space as shown in the figure below.</p>
+<p><center>
+<a href="../images/tuto2_fig3.png" data-lightbox="fig2"><img src="../images/tuto2_fig3.png" width="800px"></a><br>
+</center></p>
+<p>Then you can request to add the additional person name(s) to the dictionary later as described below:</p>
+<p><center>
+<a href="../images/tuto2_fig4.png" data-lightbox="fig3"><img src="../images/tuto2_fig4.png" width="800px"></a><br>
+</center></p>
+<ul>
+<li>
+<p>From the home page, select "<strong>Dictionaries</strong>". As username, just put "<em>maggot</em>" (this might be different within your instance).</p>
+</li>
+<li>
+<p>Then after choosing the "<strong>people</strong>" dictionary, you can download the entire dictionary in a <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab.">TSV</abbr> file (<a href="https://en.wikipedia.org/wiki/Tab-separated_values" target="_blank">Tab-Separated Values</a>) ready to be edited with your favorite spreadsheet.</p>
+</li>
+<li>
+<p>Add all the desired people's names with their institution, and possibly their <a href="https://info.orcid.org/what-is-orcid/" target="_blank">ORCID</a> and their email address. Please note that emails are required for authors and contacts</p>
+</li>
+<li>
+<p>You will then just have to send it to the <abbr title="The data manager is the person who sets the data policy, i.e. its implementation and governance.">data manager</abbr> so that he can add new people's names to the online dictionary.</p>
+</li>
+</ul>
+<p>Please proceed in the same way for all <a href="#dictionaries">dictionaries</a> (<em>people</em>, <em>funders</em>, <em>producer</em>, <em>vocabulary</em>)</p>
+<p><br></p>
+<h4 id="tutorial-describe-controlled-vocabulary">Controlled Vocabulary<a class="headerlink" href="#tutorial-describe-controlled-vocabulary" title="Permanent link">&para;</a></h4>
+<p>Depending on the configuration of your instance, it is very likely that certain fields (eg. keywords) are connected to a controlled vocabulary source (e.g. ontology, thesaurus). <a href="#definitions-vocabulary">Vocabulary</a> based on ontologies, thesauri or even dictionaries can easily be entered by <abbr title="feature in which an application predicts the rest of a word a user is typing.">autocomplete</abbr> in the "search for a value" box provided that the term exists in the corresponding vocabulary source. </p>
+<p><center>
+<a href="../images/tuto2_fig5.png" data-lightbox="fig4"><img src="../images/tuto2_fig5.png" width="500px"></a><br>
+</center></p>
+<p>If a term cannot be found by <abbr title="feature in which an application predicts the rest of a word a user is typing.">autocomplete</abbr>, you can enter the term directly in the main box, making sure to separate each term with a comma and a space as shown in the figure below.</p>
+<p><center>
+<a href="../images/tuto2_fig6.png" data-lightbox="fig5"><img src="../images/tuto2_fig6.png" width="600px"></a><br>
+</center></p>
+<p>The <abbr title="The data steward is the person who is responsible for data quality, and therefore has a role in data curation.">data steward</abbr> will later try to link it to a vocabulary source that may be suitable for the domain in question. Furthermore, even if the choice of vocabulary sources was made before the tool was put into service, a later addition is always possible. You should make the request to your <abbr title="The data manager is the person who sets the data policy, i.e. its implementation and governance.">data manager</abbr>.</p>
+<p><br></p>
+<h4 id="tutorial-describe-resources">Resources<a class="headerlink" href="#tutorial-describe-resources" title="Permanent link">&para;</a></h4>
+<p>Because data is often scattered across various platforms, databases, and file formats, this making it challenging to locate and access. This is called <a href="https://www.cohesity.com/glossary/data-fragmentation/" target="_blank">data fragmentation</a>. So the Maggot tool allows you to specify resources, i.e. data in the broader sense, whether external or internal, allowing to centralize all links towards data.</p>
+<ul>
+<li>External resources will be specified by a URL with preference for a permanent identifier (e.g. <a href="https://en.wikipedia.org/wiki/Digital_Object_Identifier" target="_blank">DOI</a>) but also any URL pointing to data whether they comply with the FAIR principle (e.g. <a href="https://inrae.github.io/ODAM/" target="_blank">ODAM</a>) or not.</li>
+<li>Internal resources will be the data files to be uploaded to the data repository at push time. In the latter case the exact name of the file on the storage space must appear in the location field.</li>
+<li>Furthermore, in the case of local data management, it would be wise to indicate in which space the data is located if it is not located in the same place as the metadata (e.g. <a href="https://nextcloud.com/" target="_blank">NextCloud</a>, Unit <a href="https://en.wikipedia.org/wiki/Network-attached_storage" target="_blank">NAS</a>, etc.)</li>
+</ul>
+<p>Four fields must be filled in :</p>
+<p><center>
+<a href="../images/tuto2_fig9.png" data-lightbox="fig9"><img src="../images/tuto2_fig9.png" width="800px"></a>
+</center></p>
+<ul>
+<li>
+<p><strong>Resource Type</strong> : Choose the type of the resource in the droplist.</p>
+</li>
+<li>
+<p><strong>Media Type</strong> : Choose a media type if applicable by <abbr title="feature in which an application predicts the rest of a word a user is typing.">autocomplete</abbr>.</p>
+</li>
+<li>
+<p><strong>Description</strong> : Provide a concise and accurate description of the resource. Must not exceed 30 characters.</p>
+</li>
+<li>
+<p><strong>Location</strong> : Preferably indicate an URL to an external resource accessible to all. But it can also be a password-protected resource (e.g. a disk space on the cloud). This can also be text clearly indicating where the resource is located (internal disk space). Finally, this can be the name of a file deposited on the same disk space as the metadata file, in order to be able to push it in the data repository at the same time as the metadata (see <a href="#publish">Publication</a>).</p>
+</li>
+</ul>
+<p><br><br><br></p></section><section class="print-page" id="tutorial-metadata"><h1 id="tutorial-metadata-quick-tutorial">Quick tutorial<a class="headerlink" href="#tutorial-metadata-quick-tutorial" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="tutorial-metadata-metadata-file">Metadata File<a class="headerlink" href="#tutorial-metadata-metadata-file" title="Permanent link">&para;</a></h3>
+<p>Once the form has been completed, even partially (at least those which are mandatory and marked with a red star), you can export your metadata in the form of a file. The file is in <abbr title="JavaScript Object Notation : format used to represent structured information.">JSON</abbr> format and must have the prefix 'META_'.</p>
+<p>By clicking on the "Generate the metadata file" button, you can save it on your disk space. </p>
+<p><center>
+<a href="../images/tuto2_fig10.png" data-lightbox="fig10"><img src="../images/tuto2_fig10.png" width="600px"></a>
+</center></p>
+<p>Furthermore, if email sending has been configured (see <a href="#settings-incconfigconfiginc">settings</a>), then you have the possibility to send the metadata file to the data managers for curation, and possibly also to support its storage on data disk space if specific rights are required.</p>
+<p><center>
+<a href="../images/tuto2_fig11.png" data-lightbox="fig11"><img src="../images/tuto2_fig11.png" width="500px"></a>
+</center></p>
+<p>In case you want to save the metadata file on your disk space, you have two ways to use this file:</p>
+<dl>
+<dt><strong>1.</strong> The first use is the recommended one because it allows metadata management within your collective.</dt>
+<dd><p>You drop the metadata file directly under the data directory corresponding to the metadata. Indeed, when installing the tool, a storage space dedicated to the tool had to be provided for this purpose. See <a href="#infrastructure">infrastructure</a>. Once deposited, you just have to wait around 30 minutes maximum so that the tool has had time to scan the root of the data directories looking for new files in order to update the database. After this period, the description of your dataset will be visible from the interface, and a selection of criteria will be made in order to restrict the search.</p></dd>
+</dl>
+<p><center>
+<a href="../images/tuto2_fig7.png" data-lightbox="fig7"><img src="../images/tuto2_fig7.png" width="800px"></a>
+</center></p>
+<dl>
+<dt><br></dt>
+<dd><p>You will then have the possibility to publish the metadata later with possibly the corresponding data in a data repository such as <a href="#publish-dataverse">Dataverse</a> or <a href="#publish-zenodo">Zenodo</a>.</p></dd>
+<dt><strong>2.</strong> The second use is only to deposit the metadata into a data repository</dt>
+<dd><p>Whether with <a href="#publish-dataverse">Dataverse</a> or <a href="#publish-zenodo">Zenodo</a>, you have the possibility to publish metadata directly in one or other of these repositories without using the storage space.</p></dd>
+</dl>
+<p><center>
+<a href="../images/tuto2_fig8.png" data-lightbox="fig8"><img src="../images/tuto2_fig8.png" width="800px"></a>
+</center></p>
+<dl>
+<dt><br></dt>
+<dd><p>Please note that you cannot also deposit the data files in this way. You will have to do this manually for each of them directly online in the repository.</p></dd>
+</dl>
+<p><br><br><br></p></section><h1 class='nav-section-title-end'>Ended: Quick tutorial</h1><section class="print-page" id="infrastructure"><h1 id="infrastructure-infrastructure">Infrastructure<a class="headerlink" href="#infrastructure-infrastructure" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="infrastructure-infrastructure-local-remote-or-mixed">Infrastructure : Local, Remote or Mixed<a class="headerlink" href="#infrastructure-infrastructure-local-remote-or-mixed" title="Permanent link">&para;</a></h3>
+<p><center>
+<a href="../images/infrastructure2.png" data-lightbox="fig0"><img src="../images/infrastructure2.png" width="800px"></a>
+</center></p>
+<p>The necessary Infrastructure involves <strong>1</strong>) a machine running a Linux OS and <strong>2</strong>) a dedicated storage space.</p>
+<p><strong>1</strong> - The machine will most often be of "<a href="https://en.wikipedia.org/wiki/Virtual_machine" target="_blank">virtual</a>" type because more simpler to deploy, either locally (with VM providers such as <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>, <a href="https://www.vmware.com/products/workstation-player.html" target="_blank">VMware Workstation</a> or <a href="https://www.youtube.com/watch?v=CaDzYUSdVn8&amp;ab_channel=URTechDotCa" target="_blank">MS Hyper-V</a>) or remotely (e.g <a href="https://www.vmware.com/products/esxi-and-esx.html" target="_blank">VMware ESXi</a>, <a href="https://www.openstack.org/" target="_blank">Openstack</a>: <a href="https://inrae.github.io/jupyterhub-vm/" target="_blank">example of deployment</a>). Moreover, the OS of your machine must allow you the deployment of <a href="https://www.docker.com/get-started/" target="_blank">docker</a> containers. See for more details on “<a href="https://opensource.com/resources/what-docker" target="_blank">What is Docker</a>”. The minimum characteristics of the VM are:  <em>2 cpu</em>, <em>2 Go RAM</em>, <em>8 Go HD</em>.</p>
+<p><strong>2</strong> - The dedicated storage space could be either in the local space of the VM, or in a remote place on the network.</p>
+<ul>
+<li>If the storage space is directly included in the VM, then tools like <a href="https://winscp.net/eng/download.php" target="_blank">WinSCP</a> or <a href="https://kapitainsky.github.io/RcloneBrowser/" target="_blank">RcloneBrowser</a> will allow you to easily transfer your files to the data space.</li>
+<li>If the storage space is your collective's NAS, you will need to make sure to open the port corresponding to the remote disk mount protocol (e.g <a href="https://en.wikipedia.org/wiki/Server_Message_Block" target="_blank">SMB</a>, <a href="https://en.wikipedia.org/wiki/Network_File_System" target="_blank">NFS</a>, <a href="https://en.wikipedia.org/wiki/ISCSI" target="_blank">iSCSI</a>, ...). on your network's firewall. If both VM and data storage are not in the same private network, it will probably also require installing the sofware layer corresponding to your corporate VPN on the VM so that it can access your NAS. See <a href="../images/infra_ex1.png" data-lightbox="fig1">example successfully tested</a>.</li>
+<li>If the storage space is in a <a href="https://en.wikipedia.org/wiki/Data_center" target="_blank">data center</a> (e.g. <a href="https://nextcloud.com/files/" target="_blank">NextCloud</a>, <a href="https://ucr-research-computing.github.io/Knowledge_Base/how_to_mount_google_drive.html" target="_blank">Google Drive</a>), then you will need to install a tool such as <a href="https://rclone.org/" target="_blank">rclone</a> on your VM in order to be able to mount the storage space on the VM's disk space. See <a href="../images/infra_ex2.png" data-lightbox="fig2">example successfully tested</a>.</li>
+</ul>
+<p><br></p></section><section class="print-page" id="installation"><h1 id="installation-installation">Installation<a class="headerlink" href="#installation-installation" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="installation-install-on-your-linux-computer-or-linux-unix-server">Install on your linux computer or linux / unix server<a class="headerlink" href="#installation-install-on-your-linux-computer-or-linux-unix-server" title="Permanent link">&para;</a></h3>
+<p>Requirements: The installation must be carried out on a (virtual) machine with  a recent Linux OS that support <a href="https://www.docker.com/get-started/" target="_blank">Docker</a> (see <a href="#infrastructure">Infrastructure</a>)</p>
+<p><br></p>
+<h4 id="installation-retrieving-the-code">Retrieving the code<a class="headerlink" href="#installation-retrieving-the-code" title="Permanent link">&para;</a></h4>
+<p>Go to the destination directory of your choice then clone the repository and <code>cd</code> to your clone path:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/inrae/pgd-mmdt.git<span class="w"> </span>pgd-mmdt
+<span class="nb">cd</span><span class="w"> </span>pgd-mmdt
+</code></pre></div>
+<p><br></p>
+<h4 id="installation-installation-of-docker-containers">Installation of Docker containers<a class="headerlink" href="#installation-installation-of-docker-containers" title="Permanent link">&para;</a></h4>
+<p>MAGGOT uses 3 Docker images for 3 distinct services:</p>
+<ul>
+<li><strong>pgd-mmdt-db</strong> which hosts the <a href="https://www.mongodb.com/basics" target="_blank">MongoDB</a> database</li>
+<li><strong>pgd-mmdt-scan</strong> which scans the data and updates the contents of the database and the web interface</li>
+<li><strong>pgd-mmdt-web</strong> which hosts the web server and the web interface pages</li>
+</ul>
+<p><br></p>
+<h4 id="installation-configuration">Configuration<a class="headerlink" href="#installation-configuration" title="Permanent link">&para;</a></h4>
+<ul>
+<li><em><a href="https://github.com/inrae/pgd-mmdt/blob/main/run" target="_blank">run</a></em> : defines root of the data directory (including for development)</li>
+<li><em><a href="https://github.com/inrae/pgd-mmdt/blob/main/dockerdbpart/initialisation/setupdb-js.template" target="_blank">dockerdbpart/initialisation/setupdb-js.template</a></em> : defines MongoDB settings</li>
+<li><em><a href="https://github.com/inrae/pgd-mmdt/blob/main/dockerscanpart/scripts/config.py" target="_blank">dockerscanpart/scripts/config.py</a></em> : defines MongoDB settings (dbserver, dbport, username, password)</li>
+<li><em><a href="https://github.com/inrae/pgd-mmdt/blob/main/web/inc/config/mongodb.inc" target="_blank">web/inc/config/mongodb.inc</a></em> : defines MongoDB settings (dbserver, dbport, username, password)</li>
+<li><em><a href="https://github.com/inrae/pgd-mmdt/blob/main/web/inc/config/config.inc" target="_blank">web/inc/config/config.inc</a></em> : defines many of web parameters (modify only if necessary)</li>
+<li><strong><em>web/inc/config/local.inc</em></strong> : defines the application parameters specific to the local installation (not erase when updating).</li>
+</ul>
+<p>See <a href="#settings">Configuration settings</a></p>
+<p><strong><em>Warning</em></strong> : You have to pay attention to put the same MongoDB settings in all the above configuration files. It is best not to change anything. It would have been preferable to put a single configuration file but this was not yet done given the different languages involved (bash, javascript, python, PHP). To be done!</p>
+<p><strong><em>Warning</em></strong> : If you are using VirtualBox with Windows then you must make sure to <a href="#avx_win11_vbox">Enable AVX</a></p>
+<p><strong><em>Note</em></strong> : If you want to run multiple instances, you will need to change in the <em><a href="#settings-run">run</a></em> file, <em>i)</em> the container names, <em>ii)</em> the data path, <em>iii)</em> the MongoDB volume name and <em>iv)</em> the MongoDB port</p>
+<p>The following two JSON files are defined by default but can be easily configured from the web interface. See the <a href="#configuration">Terminology Configuration</a> section.</p>
+<ul>
+<li><strong><em>web/conf/config_terms.json</em></strong> : define the <a href="#definitions-terminology">terminology</a></li>
+<li><strong><em>web/conf/maggot-schema.json</em></strong> : define the JSON schema used to validate metadata files.</li>
+</ul>
+<p><br></p>
+<h4 id="installation-commands">Commands<a class="headerlink" href="#installation-commands" title="Permanent link">&para;</a></h4>
+<p>The <strong><em>run</em></strong> shell script allows you to perform multiple actions by specifying an option :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>pgd-mmdt
+sh<span class="w"> </span>./run<span class="w"> </span>&lt;option&gt;
+</code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><strong><em>build</em></strong> : Create the 3 Docker images namely <strong><em>pgd-mmdt-db</em></strong>, <strong><em>pgd-mmdt-scan</em></strong> and <strong><em>pgd-mmdt-web</em></strong></li>
+<li><strong><em>pull</em></strong> : Get (pull) from DockerHub the 3 Docker images namely <strong><em>pgd-mmdt-db</em></strong>, <strong><em>pgd-mmdt-scan</em></strong> and <strong><em>pgd-mmdt-web</em></strong></li>
+<li><strong><em>start</em></strong> : <em>1</em>) Launch the 3 services by creating the Docker containers corresponding to the Docker images; <em>2</em>) Create also the MongoDB volume.</li>
+<li><strong><em>stop</em></strong> :  <em>1</em>) Remove all the 3 Docker containers; <em>2</em>) Remove the MongoDB volume.</li>
+<li><strong><em>initdb</em></strong> : Create and initialize the Mongo collection</li>
+<li><strong><em>scan</em></strong> : Scan the data  according to a fixed period (<a href="https://github.com/inrae/pgd-mmdt/blob/main/dockerscanpart/scripts/pgd-cron" target="_blank">30 min</a>) and update the contents of the database and the web interface</li>
+<li><strong><em>fullstart</em></strong> : Perform the 3 actions <strong><em>start</em></strong>, <strong><em>initdb</em></strong> and <strong><em>scan</em></strong></li>
+<li><strong><em>restart</em></strong> : Perform the 2 actions <strong><em>stop</em></strong> then <strong><em>fullstart</em></strong></li>
+<li><strong><em>ps</em></strong> : Check that all containers are running correctly</li>
+<li><strong><em>passwd</em></strong> &lt;<em>user</em>&gt;: Define the admin password if no <em>user</em> is specified, allowing you to copy the new configuration file on the server via the web interface (see <a href="#configuration">configuration</a> and to add entries in dictionaries. If a <em>user</em> is specified, the dictionary consultation will be authorized for this user.</li>
+</ul>
+<p><br></p>
+<h4 id="installation-starting-the-application">Starting the application<a class="headerlink" href="#installation-starting-the-application" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>You must first either build the 3 docker container images ... (using MongoDB 6.0+ with <a href="#avx_win11_vbox">AVX enabled</a>)
+   <div class="highlight"><pre><span></span><code>sh<span class="w"> </span>./run<span class="w"> </span>build
+</code></pre></div></p>
+</li>
+<li>
+<p>... or pull the 3 images from DockerHub (using MongoDB 4.4)
+   <div class="highlight"><pre><span></span><code>sh<span class="w"> </span>./run<span class="w"> </span>pull
+</code></pre></div></p>
+</li>
+<li>
+<p>The application can be sequentially started :</p>
+<ul>
+<li>Starting the web interface
+ <div class="highlight"><pre><span></span><code>sh<span class="w"> </span>./run<span class="w"> </span>start
+</code></pre></div></li>
+<li>Initialization of the MongoDB database
+ <div class="highlight"><pre><span></span><code>sh<span class="w"> </span>./run<span class="w"> </span>initdb
+</code></pre></div></li>
+<li>Scanning the data directory for metadata files (META_XXXX.json)
+ <div class="highlight"><pre><span></span><code>sh<span class="w"> </span>./run<span class="w"> </span>scan
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>You can also launch these 3 steps with a single command:
+   <div class="highlight"><pre><span></span><code>sh<span class="w"> </span>./run<span class="w"> </span>fullstart
+</code></pre></div></p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="installation-launching-the-web-application-in-the-web-browser">Launching the web application in the web browser<a class="headerlink" href="#installation-launching-the-web-application-in-the-web-browser" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Once the application is started, we can see if the containers are started using the following command:
+   <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps<span class="w"> </span>-a
+</code></pre></div></p>
+</li>
+<li>
+<p>which should produce a result similar to the following:</p>
+</li>
+</ul>
+<pre style="color:#060606; font-size: 12px;">
+   CONTAINER ID  IMAGE          COMMAND                 CREATED          STATUS         PORTS                                  NAMES
+   5914504f456d  pgd-mmdt-web   "docker-php-entrypoi."  12 seconds ago   Up 10 seconds  0.0.0.0:8087->80/tcp, :::8087->80/tcp  mmdt-web
+   226b13ed9467  pgd-mmdt-scan  "cron -f"               12 seconds ago   Up 11 seconds                                         mmdt-scan
+   81fecbb56d23  pgd-mmdt-db    "docker-entrypoint.s."  13 seconds ago   Up 12 seconds  27017/tcp                              mmdt-db
+</pre>
+
+<ul>
+<li>
+<p>On the first line, the one which corresponds to the web interface, we see that port 80 of the docker is exported to port 8087 of the VM.
+Let's say that the IP address of your VM is 192.168.56.2, then in your browser you will need to put the URL <a href="http://192.168.56.2:8087/">http://192.168.56.2:8087/</a>. You can of course change the port number in the '<em><a href="#settings-run">run</a></em>' file.</p>
+</li>
+<li>
+<p>It may be preferable to use a lightweight http server like <a href="https://docs.nginx.com/nginx/admin-guide/web-server/web-server/" target="_blank">nginx</a> so that the Maggot URL will be <a href="http://192.168.56.2/maggot/">http://192.168.56.2/maggot/</a>. Below an example of config:
+   <div class="highlight"><pre><span></span><code><span class="c1">## /etc/nginx/nginx.conf</span>
+http<span class="w"> </span><span class="o">{</span>
+
+...
+<span class="w">    </span>upstream<span class="w"> </span>maggot<span class="w">  </span><span class="o">{</span><span class="w"> </span>server<span class="w"> </span><span class="m">127</span>.0.0.1:8087<span class="p">;</span><span class="w"> </span><span class="o">}</span>
+...
+
+<span class="o">}</span>
+
+<span class="c1">## /etc/nginx/conf.d/my-site.conf</span>
+
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">80</span><span class="w"> </span>default<span class="p">;</span>
+<span class="w">    </span>server_name<span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+
+...
+
+<span class="w">    </span>location<span class="w"> </span>/maggot/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>proxy_set_header<span class="w"> </span>Host<span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w"> </span>X-App-Name<span class="w"> </span><span class="s1">&#39;maggot&#39;</span><span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w"> </span>X-Real-Ip<span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-Host<span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w"> </span>X-Forwarded-For<span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://maggot/<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+...
+
+<span class="o">}</span>
+</code></pre></div></p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="installation-stoping-the-application">Stoping the application<a class="headerlink" href="#installation-stoping-the-application" title="Permanent link">&para;</a></h4>
+<ul>
+<li>To stop the application :
+   <div class="highlight"><pre><span></span><code>sh<span class="w"> </span>./run<span class="w"> </span>stop
+</code></pre></div></li>
+</ul>
+<p><br></p>
+<h4 id="installation-updating-the-application">Updating the application<a class="headerlink" href="#installation-updating-the-application" title="Permanent link">&para;</a></h4>
+<p>When updating the application, it is imperative to preserve a whole set of configuration files as well as the content of certain directories (dictionaries, javascripts dedicated to vocabularies, etc.). An update script is available (<a href="https://github.com/inrae/pgd-mmdt/blob/main/etc/update-maggot.sh" target="_blank">./etc/update-maggot.sh</a>) preferably placed under '<strong>/usr/local/bin</strong>'. To preserve your configuration, it is recommended to create local configuration files.</p>
+<ul>
+<li>
+<p>A first file '<strong>local.conf</strong>' will contain all the parameters to be preserved, initially contained in the '<em><a href="#settings-run">run</a></em>' file. A small example could be as follow :
+   <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Local HTTP Port for web application</span>
+<span class="nv">WEB_PORT</span><span class="o">=</span><span class="m">8088</span>
+
+<span class="c1"># Path to the data</span>
+<span class="nv">DATADIR</span><span class="o">=</span>/media/Workdir/Share/DATA/
+</code></pre></div></p>
+</li>
+<li>
+<p>A second file '<strong>./web/inc/config/local.inc</strong>' will contain all the parameters to be preserved, initially contained in the '<em><a href="#settings-incconfigconfiginc">./web/inc/config/config.inc</a></em>' file. A small example could be as follow :
+   <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="c1"># Main title</span>
+<span class="nv">$TITLE</span> <span class="o">=</span><span class="s1">&#39;Metadata management - My Labs&#39;</span><span class="p">;</span>
+<span class="nv">$MAINTITLE</span> <span class="o">=</span><span class="nv">$TITLE</span><span class="p">;</span>
+
+<span class="c1"># File Browser</span>
+<span class="nv">$FILEBROWSER</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="nv">$URL_FILEBROWSER</span><span class="o">=</span><span class="s1">&#39;/fb/&#39;</span><span class="p">;</span>
+
+<span class="c1"># Enable some functionalities</span>
+<span class="nv">$export_oai</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h3 id="installation-architecture-diagram">Architecture diagram<a class="headerlink" href="#installation-architecture-diagram" title="Permanent link">&para;</a></h3>
+<p><center>
+<a href="../images/schema.png" data-lightbox="fig0"><img src="../images/schema.png" width="800px"></a><br>
+<strong><em>Note:</em></strong>  <em>See how to do proceed for <a href="#configuration">configuration steps</a>.</em>
+</center></p>
+<hr />
+<h3 id="installation-file-browser">File Browser<a class="headerlink" href="#installation-file-browser" title="Permanent link">&para;</a></h3>
+<p>You can provide access to your data via a <a href="https://filebrowser.org/" target="_blank">file browser</a>. This application must be <a href="https://github.com/djacob65/maggot-fb" target="_blank">installed separately</a> but can be connected to Maggot by specifying the corresponding URL in the <a href="#settings-incconfigconfiginc">configuration file</a>. Users and their rights are managed in the filebrowser application. Likewise, we can also <a href="../images/filebrowser_fig2.png" data-lightbox="fig2">create links to the data without a password</a>. These links can be usefully specified as external resources in the metadata managed by Maggot.</p>
+<p><center>
+<a href="../images/filebrowser_fig1.png" data-lightbox="fig10"><img src="../images/filebrowser_fig1.png" width="800px"></a><br>
+ <em>See how to do install in <a href="https://github.com/djacob65/maggot-fb" target="_blank">github</a>.</em>
+</center></p>
+<p><br></p>
+<hr />
+<h3 id="installation-authentication">Authentication<a class="headerlink" href="#installation-authentication" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Implement an authentication layer based on <a href="https://en.wikipedia.org/wiki/OAuth" target="_blank">OAUTH 2.0</a></p>
+<p>The initial choice was not to manage users in the Maggot tool. This choice was made to promote the complete opening by default of metadata within a collective. However, for management within a collective that goes beyond a simple intranet, it is necessary to set up an authentication layer. Setting up such a layer can be done independently of the Maggot tool, i.e. without modifying its code or configuration. An <a href="https://en.wikipedia.org/wiki/Single_sign-on" target="_blank">SSO</a> implementation is proposed online, which can serve as a basis for a larger configuration. A <a href="https://github.com/djacob65/maggot-sso/wiki/Single-Sign-On" target="_blank">Wiki page</a> provides a detailed description.</p>
+<ul>
+<li>Source code on github : <a href="https://github.com/djacob65/maggot-sso/" target="_blank">https://github.com/djacob65/maggot-sso/</a></li>
+</ul>
+<p><center>
+<a href="../images/sso_oauth2.png" data-lightbox="fig11"><img src="../images/sso_oauth2.png" width="800px"></a><br>
+ <em>Keycloak supports OIDC (an extension to OAuth 2.0) and works as an IdP while authenticating a client.</em>
+</center></p>
+<p><br>
+<br></p></section><section class="print-page" id="definitions"><h1 id="definitions-definition-files">Definition Files<a class="headerlink" href="#definitions-definition-files" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="definitions-metadata-definition-files">Metadata definition files<a class="headerlink" href="#definitions-metadata-definition-files" title="Permanent link">&para;</a></h3>
+<p>The Maggot tool offers <a href="https://inrae.github.io/pgd-mmdt/pdf/MAGGOT_OpenData_Oct2023.pdf?download=false" target="_blank">great flexibility in configuration</a>. It allows you to completely choose all the metadata you want to describe your data. You can base yourself on an existing <a href="https://en.wikipedia.org/wiki/Metadata_standard" target="_blank">metadata schema</a>, invent <a href="https://committee.iso.org/files/live/sites/tc46sc11/files/documents/N800R1%20Where%20to%20start-advice%20on%20creating%20a%20metadata%20schema.pdf" target="_blank">your own schema</a> or, more pragmatically, mix one or more schemas by introducing some metadata specific to your field of application. However, keep in mind that if you want to add descriptive metadata to your data then a <a href="https://libraries.mit.edu/data-management/store/documentation/" target="_blank">certain amount of information</a> is expected. But a completely different use of the tool is possible, it's up to you.</p>
+<p>There are <strong>two levels of definition files</strong> as shown the figure below:</p>
+<p><center><a href="../images/definitions_fig2.png" data-lightbox="fig2"><img src="../images/definitions_fig2.png" width="600px"></a></center></p>
+<p><strong>1</strong> - The first level concerns the definition of terminology (metadata) similar to a <a href="https://sustainableheritagenetwork.org/system/files/atoms/file/How_to_Create_a_Descriptive_Metadata_Plan.pdf" target="_blank">descriptive metadata plan</a>. Clearly, this category is more akin to configuration files. They represent the heart of the application around which everything else is based. The input and search interfaces are completely generated from these definition files (especially the <em><a href="#definitions-terminology">web/conf/config_terms.txt</a></em> file), thus defining each of the fields, their <a href="../images/terminology_types.png" data-lightbox="fig3">input type</a> (<em>checkbox</em>, <em>dropbox</em>, <em>textbox</em>, ...) and the associated <a href="#definitions-vocabulary">controlled vocabulary</a> (ontology and thesaurus by <abbr title="feature in which an application predicts the rest of a word a user is typing">autocompletion</abbr>, drop-down list according to a list of fixed terms). This is why a <a href="#configuration">configuration step</a> is essential in order to be able to configure all the other modules.</p>
+<p><strong>2</strong> - The second level concerns the definitions of the mapping to a differently structured metadata schema (<a href="#chats-chat4" target="_blank">metadata crosswalk</a>, <em>i.e</em> a specification for mapping one metadata standard to another), used either <strong><em>i)</em></strong> for metadata export to a remote repository (<em>e.g.</em> <a href="#definitions-dataverse">Dataverse</a>, <a href="#definitions-zenodo">Zenodo</a>) or <strong><em>ii)</em></strong> for metadata harvesting (<em>e.g.</em> <a href="#definitions-json-ld"><abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr>-LD</a>, <a href="#definitions-oai-pmh">OAI-PMH</a>). Simply place the definition files in the configuration directory (<em><a href="https://github.com/inrae/pgd-mmdt/tree/main/web/conf" target="_blank">web/conf</a></em>) for them to be taken into account, provided you have adjusted the configuration (See <a href="#settings-incconfigconfiginc">Settings</a>).</p>
+<p>All definition files are made using a simple spreadsheet then exported in <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> format. </p>
+<p>The list of definition files in Maggot are given below. All must be put under the directory <em><a href="https://github.com/inrae/pgd-mmdt/tree/main/web/conf" target="_blank">web/conf</a></em>.
+<center><a href="https://pmb-bordeaux.fr/maggot/config/view" target="_blank"><img src="../images/definitions_fig1.png" width="600px"></a></center></p>
+<p>See an example on line : <a href="https://pmb-bordeaux.fr/maggot/config/view" target="_blank">https://pmb-bordeaux.fr/maggot/config/view</a> and the <a href="https://pmb-bordeaux.fr/maggot/entry" target="_blank">corresponding form</a> based on these definition files.</p>
+<p><br><br></p>
+<!--
+https://rd-alliance.github.io/Research-Metadata-Schemas-WG/
+https://www.rd-alliance.org/group/research-metadata-schemas-wg/outcomes/collection-crosswalks-fifteen-research-data-schemas
+https://www.getty.edu/research/publications/electronic_publications/intrometadata/crosswalks.html
+--></section>
+                        <h1 class='nav-section-title' id='section-definition-files'>
+                            Definition files <a class='headerlink' href='#section-definition-files' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="definitions-terminology"><h1 id="definitions-terminology-terminology">Terminology<a class="headerlink" href="#definitions-terminology-terminology" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="definitions-terminology-definition-of-terminology">Definition of terminology<a class="headerlink" href="#definitions-terminology-definition-of-terminology" title="Permanent link">&para;</a></h3>
+<p>There are two definition files to set up.</p>
+<ul>
+<li><strong>The terminology definition file</strong> (<strong><em>config_terms.txt</em></strong>) serving to describe all terminology used to define the metadata of a dataset.</li>
+<li><strong>The terminology documentation file</strong> (<strong><em>config_doc.txt</em></strong>) serving to documente all terminology definitions.</li>
+</ul>
+<p>Each time there is a change in these two definition files, it is necessary to <a href="#configuration">convert</a> them so that they are taken into account by the application.</p>
+<p>Terminology is the set of terms used to define the metadata of a dataset. A single file (<strong><em>web/conf/config_terms.txt</em></strong>) contains all the terminology. The input and search interfaces (e.g <a href="../images/entry_fig2.png" data-lightbox="fig5">screenshot</a>) are completely generated from this definition file, thus defining <strong><em>i)</em></strong> each of the fields, their input type (checkbox, dropbox, textbox, ...) and <strong><em>ii)</em></strong> the associated controlled vocabulary (ontology and thesaurus by <abbr title="feature in which an application predicts the rest of a word a user is typing">autocompletion</abbr>, drop-down list according to a list of fixed terms).</p>
+<p><center>
+<a href="../images/config_terms_wf.png" data-lightbox="figwf"><img src="../images/config_terms_wf.png" width="700px"></a>
+</center></p>
+<p>The <a href="https://en.wikipedia.org/wiki/Metadata_standard" target="_blank">metadata schema</a> proposed by defaut is mainly established according to the <a href="https://ddialliance.org/" target="_blank">DDI</a> (Data Documentation Initiative) schema that also corresponds to that adopted by the <a href="https://ddialliance.org/project/the-dataverse-project" target="_blank">Dataverse</a> software.</p>
+<p>Terminology is organised in several sections. By default 6 sections are proposed, but you can redefine them as you wish:</p>
+<ul>
+<li><strong><em>DEFINITION</em></strong> : Section for describing shortly the dataset. </li>
+<li><strong><em>STATUS</em></strong> : Section for defining the status of the dataset, associated rights, dates, etc.</li>
+<li><strong><em>MANAGEMENT</em></strong> : Section for assigning names of people or organizations who participated in the production of data and according to the type of participation.</li>
+<li><strong><em>DESCRIPTORS</em></strong> : Section for defining elements characterizing the data themselves and certain experimental conditions for obtaining them.</li>
+<li><strong><em>OTHER</em></strong> : Section for entering miscellious information (protocols, comments, issues, ...)</li>
+<li><strong><em>RESOURCES</em></strong> : Section for defining metadata about all the resources you want, i.e both external (links) and internal (data files on the storage space) resources. This section does not require any configuration <em>a priori</em>, it is added <em>de facto</em>.</li>
+</ul>
+<p>For each section, fields are then defined. These fields can be defined according to the way they will be entered via the web interface. There are <strong>6 different types of input</strong>: check boxes (<strong><em>checkbox</em></strong>), drop lists (<strong><em>dropbox</em></strong>), single-line text boxes (<strong><em>textbox</em></strong>), single-line text boxes with an additional box for multiple selection from a catalog of terms (<strong><em>multiselect</em></strong>), date picker (<strong>datebox</strong>) and multi-line text boxes (<strong><em>areabox</em></strong>).</p>
+<p><center>
+<a href="../images/terminology_types.png" data-lightbox="fig0"><img src="../images/terminology_types.png" width="600px"></a>
+</center></p>
+<p>For two types (<strong><em>checkbox</em></strong> and <strong><em>dropbox</em></strong>), it is possible to define the values to be selected (predefined terms).</p>
+<p><br></p>
+<h4 id="definitions-terminology-structure-of-the-terminology-definition-file-tsv">Structure of the Terminology definition file (<abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr>)<a class="headerlink" href="#definitions-terminology-structure-of-the-terminology-definition-file-tsv" title="Permanent link">&para;</a></h4>
+<p>The file must have 9 columns with headers defined as follows:</p>
+<ul>
+<li>column 1 - <strong>Field</strong> : shortname of the fields</li>
+<li>column 2 - <strong>Section</strong> : shortname ot the sections</li>
+<li>column 3 - <strong>Required</strong> : indicates if the field is mandatory ('Y') or not ('N')</li>
+<li>column 4 - <strong>Search</strong> : indicates if the field can be used as a criterion search ('Y') or not ('N')</li>
+<li>column 5 - <strong>Shortview</strong> : indicates with ordered numbers if the field serves for the overview table after the search (empty by default)</li>
+<li>column 6 - <strong>Type</strong> : indicates the way they will be entered via the web interface (possible values are: <strong><em>textbox</em></strong>, <strong><em>dropbox</em></strong>, <strong><em>checkbox</em></strong>, <strong><em>multiselect</em></strong>, <strong><em>datebox</em></strong> and <strong><em>areabox</em></strong>).</li>
+<li>column 7 - <strong>Features</strong> : dependings on the Type value, one can specifiy some specific features. If several features, they must be separated by a comma.<ul>
+<li><strong>open=0</strong> or <strong>open=1</strong> (<strong><em>checkbox</em></strong>) :  indicates if the selection is opened or not. See <a href="#definitions-vocabulary">Vocabulary</a>.</li>
+<li><strong>autocomplete=<em>entity</em></strong> (<strong><em>textbox</em></strong>, <strong><em>checkbox</em></strong> &amp; <strong><em>multiselect</em></strong>) :  The <em>entity.js</em> file must be present under <strong><em>web/cvlist/entity/</em></strong> if the entity is a dictionary otherwise it must be present under <em><a href="https://github.com/inrae/pgd-mmdt/blob/main/web/js/autocomplete/" target="_blank">web/js/autocomplete</a></em>. See <a href="#definitions-vocabulary">Vocabulary</a>.</li>
+<li><strong>ws=<em>web_service name</em></strong> (<strong><em>multiselect</em></strong>) : indicates the web service name, e.g <em>VO</em>, <em>ols</em>, <em>agroportal</em> or <em>bioportal</em>. Attribute available only if the API call for the vocabulary is based on the <a href="https://twitter.github.io/typeahead.js/" target="_blank">Twitter's Typeahead library</a>. In this case, the autocomplete attribute must be equal to <em>typeahead</em>. See <a href="#definitions-vocabulary">Vocabulary</a>.</li>
+<li><strong>onto=<em>ontology list/thesaurus name</em></strong> (<strong><em>multiselect</em></strong>) : indicates the ontology list, e.g. for a web service based on <a href="https://ontoportal.org/">OntoPortal</a> or the thesaurus name, e.g. for a web service based on <a href="https://skosmos.org/">SKOSMOS</a>. In case of an ontology list, the separator (<em>:</em>) must a colon with no space (eg. <em>OBI:EFO:PO:ENVO</em>). Attribute available only if the API call for the vocabulary is based on the <a href="https://twitter.github.io/typeahead.js/" target="_blank">Twitter's Typeahead library</a>. In this case, the autocomplete attribute must be equal to <em>typeahead</em>. See <a href="#definitions-vocabulary">Vocabulary</a>.</li>
+<li><strong>width=<em>NNNpx</em></strong> (<strong><em>textbox</em></strong>, <strong><em>dropbox</em></strong>, <strong><em>datebox</em></strong>) : allows you to specify the width of the box. Usefull if you want put several fields in the same line. See note 1 below.</li>
+<li><strong>row=<em>NN</em></strong> and <strong>cols=<em>NN</em></strong> (<strong><em>areabox</em></strong>) : allows you to specify the row and column size of the textarea.</li>
+</ul>
+</li>
+<li>column 8 - <strong>Label</strong> : Labels corresponding to the fields that will appear in the web interface</li>
+<li>
+<p>column 9 - <strong>Predefined terms</strong> : for fields defined with a type equal to <strong><em>checkbox</em></strong> or <strong><em>dropbox</em></strong>, one can give a list of terms separated by a comma.</p>
+</li>
+<li>
+<p><strong>Notes</strong></p>
+<ul>
+<li>the fields will be displayed in the same order as in the file and by section. So if you want to specify several textboxes with particular sizes so that they are on the same line, they should belong to the same section and follow each other in the file in the same order.</li>
+<li>the <strong><em>title</em></strong> and <strong><em>description</em></strong> fields are mandatory but not necessarily in the same section.</li>
+</ul>
+</li>
+</ul>
+<p>Below an example of Terminology definition file (<abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr>)
+<center>
+<a href="../images/config_terms_txt.png" data-lightbox="fig1"><img src="../images/config_terms_txt.png" width="800px"></a>
+</center><br></p>
+<p>Example of Maggot <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> file generated based on the same definition file</p>
+<ul>
+<li><a href="https://pmb-bordeaux.fr/maggot/metadata/frim1?format=maggot" target="_blank">Maggot <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> of the FRIM dataset</a> and its corresponding <a href="https://pmb-bordeaux.fr/maggot/conf/maggot-schema.json" target="_blank"><abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr>-schema</a></li>
+</ul>
+<p><br></p>
+<h4 id="definitions-terminology-structure-of-the-terminology-documentation-file-tsv">Structure of the Terminology documentation file (<abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr>)<a class="headerlink" href="#definitions-terminology-structure-of-the-terminology-documentation-file-tsv" title="Permanent link">&para;</a></h4>
+<p>The documentation definition file is used to have online help for each field (small icon placed next to each label on the form). So it should only be modified when a field is added or deleted, or moved to another section. This file will be used then to generate the online metadata documentation according to the figure below (See <a href="#configuration">Configuration</a> to find out how to carry out this transformation).</p>
+<p><center>
+<a href="../images/docwf_fig.png" data-lightbox="fig2"><img src="../images/docwf_fig.png" width="600px"></a>
+</center></p>
+<p>The file must have 3 columns with headers defined as follows:</p>
+<ul>
+<li>column 1 - <strong>Type</strong> : The type of the element, namely 'section', 'field' or 'option'. An 'option' type must correspond to each of the options for a field corresponding to a drop-down list.</li>
+<li>column 2 - <strong>Name</strong> : Name of the element. The names of the sections, variables and drop-down options must be exactly the same as those specified in the terminology definition file.</li>
+<li>column 3 - <strong>Description</strong> : The description corresponding to the element, serving as much as possible to give indications on the information to be selected or entered, in order to remove possible ambiguities.</li>
+</ul>
+<p>Below an example of Terminology documentation file (<abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr>)
+<center>
+<a href="../images/config_doc_txt.png" data-lightbox="fig2"><img src="../images/config_doc_txt.png" width="800px"></a>
+<a href="../images/config_doc_txt_2.png" data-lightbox="fig2b"><img src="../images/config_doc_txt_2.png" width="800px"></a>
+</center><br></p>
+<p>Same example as above converted to HTML format using <abbr title="a lightweight markup language designed to provide easy-to-read and easy-to-write syntax. A Markdown document can be read as is without appearing to have been marked up or formatted with special instructions.">Markdown</abbr> format</p>
+<ul>
+<li><a href="https://pmb-bordeaux.fr/maggot/doc/meta" target="_blank">Metadata Documentation</a></li>
+</ul>
+<p><br></p></section><section class="print-page" id="definitions-vocabulary"><h1 id="definitions-vocabulary-vocabulary">Vocabulary<a class="headerlink" href="#definitions-vocabulary-vocabulary" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="definitions-vocabulary-vocabulary_1">Vocabulary<a class="headerlink" href="#definitions-vocabulary-vocabulary_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In this section we expose the full extent of the possibilities concerning the vocabulary in Maggot.</li>
+<li>Choosing the type of vocabulary and how to enter it depends entirely on what you put in the <a href="#definitions-terminology">terminology definition file</a>. However, some approaches require a little technicality by writing small scripts based on <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, but nothing too serious. You can always take an already ready-made script and modify only the part that concerns your focus.</li>
+</ul>
+<p><br></p>
+<p><strong>1</strong> -  <strong>Vocabulary based on a list of terms fixed in advance</strong> (<em>checbox with feature open=0</em>)</p>
+<ul>
+<li>List of well-chosen and limited Control Vocabulary e.g according to a reference e.g. Data Document Initiative.</li>
+</ul>
+<p><center>
+<a href="../images/vocabulary_fig1.png" data-lightbox="fig1"><img src="../images/vocabulary_fig1.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>2</strong> - <strong>Vocabulary open for addition</strong> (<em>checkbox with feature open=1</em>)</p>
+<ul>
+<li>allows you to collect the desired <em>Control Vocabulary</em> (CV) from users. In order to initiate the list, you can put some terms in the <em>predefined terms</em> column of the terminology definition file.</li>
+</ul>
+<p><center>
+<a href="../images/vocabulary_fig2.png" data-lightbox="fig2"><img src="../images/vocabulary_fig2.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>3</strong> - <strong>Vocabulary based on a web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> in a text field</strong> (<em>textbox</em>)</p>
+<ul>
+<li>The <a href="https://en.wikipedia.org/wiki/Web_API" target="_blank">web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr></a> is defined in a <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> file with the same name as the assigned variable (here <em>cities</em>) and must present under <em>web/js/autocomplete</em>. For example, to enter a French city you can use the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> <a href="https://geo.api.gouv.fr/decoupage-administratif" target="_blank">geo.api.gouv.fr</a>. See <a href="https://github.com/inrae/pgd-mmdt/blob/main/web/js/autocomplete/cities.js" target="_blank">cities.js</a></li>
+</ul>
+<p><center>
+<a href="../images/vocabulary_fig3.png" data-lightbox="fig3"><img src="../images/vocabulary_fig3.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>4</strong> - <strong>Vocabulary based on a dictionary with multiple selection</strong> (<em>multiselect</em>) </p>
+<ul>
+<li><a href="#dictionaries">Dictionaries</a> allow you to record multiple information necessary to define an entity, such as the names of people or even the funders. These information, once entered and saved in a file called a dictionary. Based on a very simple JavaScript retrieving the complete list of items included in the dictionary, thus creating a sort of internal <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>, we can fill a Maggot field by  autocompletion related to a search for these items.</li>
+<li>The JavaScript file must be named <em><strong>dico.js</strong></em> and be present under <em><strong>web/cvlist/<em>dico</em>/</strong></em> where <em><strong>dico</strong></em> is the name of the dictionary. See for instance <em><a href="https://github.com/inrae/pgd-mmdt/tree/main/web/cvlist/people/people.js" target="_blank">people.js</a></em></li>
+</ul>
+<p><center>
+<a href="../images/vocabulary_fig4.png" data-lightbox="fig4"><img src="../images/vocabulary_fig4.png" width="800px"></a>
+</center>
+<br></p>
+<p><strong>5</strong> - <strong>Multi-select vocabulary, based on an <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> managed by Twitter's Typeahead library.</strong> (<em>multiselect</em>) </p>
+<ul>
+<li>
+<p>Maggot embeds <a href="https://github.com/twitter/typeahead.js/blob/master/doc/jquery_typeahead.md" target="_blank">Twitter's Typeahead library</a> making it relatively easy for a data manager to implement a new vocabulary from its web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>. With the help of this library, this allows users to select a term from a list of vocabulary terms within a drop-down list. The list of terms has been pre-selected based on the first letters entered in the “Search for value” box. This list is dynamically refreshed when letters are added or modified. So, unlike a single call to the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> returning the entire list of terms in memory, which can take a very long time to load, the calls are made dynamically on the basis of a portion of a word (3 letters minimum by default), limiting the number of terms to retrieve. Thus this makes use very fluid.</p>
+</li>
+<li>
+<p>To implement an <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>-based web service, it is necessary to create two scripts (<em>&lt;ws&gt;_typeahead.js</em> and <em>&lt;wstype&gt;.inc</em>) which will each be used at one stage of the process as shown in the following figure:</p>
+</li>
+</ul>
+<p><center>
+<a href="../images/vocabulary_fig7.png" data-lightbox="fig7"><img src="../images/vocabulary_fig7.png" width="600px"></a>
+</center></p>
+<ol>
+<li>
+<p><em>&lt;ws&gt;_typeahead.js</em> : This file corresponds to the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> call when entering vocabulary using Twitter's Typeahead library. The prefix <em>&lt;ws&gt;</em> standing for web service, must be positioned so as to correspond to the name of the service indicated in the <em>CVname</em> column of the mapping file (see <a href="#definitions-mapping">mapping</a>) as well as to the corresponding value for the '<em>ws</em>' attribute in the column '<em>features</em>' of the terminology definition file (see <a href="#definitions-terminology">definitions</a>). This file must then be placed under the <em>web/js/autocomplete</em> directory. You will find a <a href="https://github.com/inrae/pgd-mmdt/blob/main/web/js/autocomplete/template_typeahead.js" target="_blank">template file</a> in this directory.</p>
+</li>
+<li>
+<p><em>&lt;wstype&gt;.inc</em> : This file corresponds to the <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr> call while metadata crosswalks processus and based on the mapping file (<a href="#definitions-mapping"><em>web/conf/mapping.txt</em></a>).The prefix <em>&lt;wstype&gt;</em> standing for web service type, must be positioned so as to correspond to the type of the service indicated in the <em>CVtype</em> column of the mapping file. This file must then be placed under the <em>web/inc/mapping/</em> directory. You will find a <a href="https://github.com/inrae/pgd-mmdt/blob/main/web/inc/mapping/template.inc" target="_blank">template file</a> in this directory.</p>
+</li>
+</ol>
+<p><br></p>
+<ul>
+<li>By defaut, Maggot already provides some vocaburay web services implemented in this way such as the ontology portals based on <a href="https://ontoportal.org/" target="_blank">OntoPortal</a>, the <a href="https://skosmos.org/" target="_blank">SKOSMOS</a> thesauri and the <a href="https://www.ebi.ac.uk/ols4" target="_blank">EMBL-EBI Ontology Lookup Service</a>. The figure below shows the configuration in the terminology definition file and the corresponding screenshots for each vocabulary.</li>
+</ul>
+<p><center>
+<a href="../images/vocabulary_fig7b.png" data-lightbox="fig7b"><img src="../images/vocabulary_fig7b.png" width="800px"></a>
+</center></p>
+<ol>
+<li>
+<p><a href="https://agroportal.lirmm.fr/" target="_blank">AgroPortal</a> and <a href="https://bioportal.bioontology.org/" target="_blank">BioPortal</a> are both based on <a href="https://ontoportal.org/" target="_blank">OntoPortal</a> which is a generic technology to build ontology repositories or semantic artefact catalogues.</p>
+</li>
+<li>
+<p><a href="https://skosmos.org/" target="_blank">SKOSMOS</a> is a web tool facilitating the posting of controlled vocabulary online in the form of a <a href="https://en.wikipedia.org/wiki/Thesaurus_(information_retrieval)" target="_blank">thesaurus</a> according to the <a href="https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System" target="_blank">SKOS</a> data model. It offers a navigation interface as well as a web <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>.</p>
+</li>
+<li>
+<p><a href="https://www.ebi.ac.uk/ols4" target="_blank">EMBL-EBI Ontology Lookup Service</a> is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. You can browse the ontologies through the website as well as programmatically via the OLS <abbr title="Application Program Interface in contrast with a User Interface. It is a way for two or more computer programs to communicate with each other.">API</abbr>.</p>
+</li>
+</ol>
+<p>Note: we also support the <a href="https://semanticlookup.zbmed.de/ols/index" target="_blank">Terminology Service for NFDI4Health</a> given that it is also based on OLS.</p>
+<p><br></p>
+<ul>
+<li>Here is, for example, the implementation of the <a href="https://thesaurus.inrae.fr/thesaurus-inrae/en/" target="_blank">INRAE Thesaurus</a>, a web service based on <a href="https://skosmos.org/" target="_blank">SKOSMOS</a>. The figure below shows in more details how to fill in the definition files linked to the two scripts necessary for implementing the web service :</li>
+</ul>
+<p><center>
+<a href="../images/vocabulary_fig7c.png" data-lightbox="fig7b"><img src="../images/vocabulary_fig7c.png" width="800px"></a>
+</center>
+<br></p>
+<ul>
+<li>
+<p>Links to the two scripts :</p>
+<ul>
+<li><a href="https://github.com/inrae/pgd-mmdt/blob/main/web/js/autocomplete/VO_typeahead.js" target="_blank">web/js/autocomplete/VO_typeahead.js</a></li>
+<li><a href="https://github.com/inrae/pgd-mmdt/blob/main/web/inc/mapping/skosmos.inc" target="_blank">web/inc/mapping/skosmos.inc</a></li>
+</ul>
+</li>
+</ul></section><section class="print-page" id="definitions-mapping"><h1 id="definitions-mapping-mapping-definition-file">Mapping Definition File<a class="headerlink" href="#definitions-mapping-mapping-definition-file" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="definitions-mapping-mapping-definition-file_1">Mapping definition File<a class="headerlink" href="#definitions-mapping-mapping-definition-file_1" title="Permanent link">&para;</a></h3>
+<p><strong>The mapping file</strong> (<strong><em>mapping.txt</em></strong>) is used as indicated by its name to match a term chosen by the user during entry with another term from an ontology or a thesaurus and therefore to obtain a URL which will be used for referencing. It can be used for each <a href="https://www.google.com/search?q=metadata+crosswalk+definition&amp;oq=metadata+crosswalk" target="_blank">metadata crosswalk</a> requiring such a mapping (e.g. to the <a href="#definitions-dataverse">Dataverse</a>, <a href="#definitions-zenodo">Zenodo</a> or <a href="#definitions-json-ld">JSON-LD</a> format).</p>
+<p>The role of this definition file is illustrated with the figure above
+<center>
+<a href="../images/mapping_fig2.png" data-lightbox="fig2"><img src="../images/mapping_fig2.png" width="600px"></a>
+</center>
+<br></p>
+<p>The file must have <strong><em>5 columns</em></strong> with headers defined as follows:</p>
+<ul>
+<li>column 1 - <strong>CVname</strong> : name of the mapping entry</li>
+<li>column 2 - <strong>CVtype</strong> : type of the CV target (by default, must be either <em>ontoportal</em>, <em>skosmos</em> or <em>ols</em>)</li>
+<li>column 3 - <strong>CVurl</strong> : URL of the corresponding web API</li>
+<li>column 4 - <strong>CVterm</strong> : name of the thesaurus or the ontology list separated by a comma</li>
+<li>column 5 - <strong>CVlang</strong> : the chosen language (mainly for thesauri)</li>
+</ul>
+<p>Note that a corresponding <em>&lt;CVtype&gt;.inc</em> file must be located under <em>web/inc/mapping</em>.
+<br></p>
+<p>Below an example of Mapping definition file (TSV)</p>
+<p><center>
+<a href="../images/mapping_fig1.png" data-lightbox="fig1"><img src="../images/mapping_fig1.png" width="800px"></a>
+</center>
+<br></p></section><section class="print-page" id="definitions-dataverse"><h1 id="definitions-dataverse-dataverse-definition-file">Dataverse Definition File<a class="headerlink" href="#definitions-dataverse-dataverse-definition-file" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<p><img src="../images/dataverse_logo.png" width="250px"></p>
+<p>Open source research data repository software, <a href="https://open-research-europe.ec.europa.eu/for-authors/data-guidelines#approvedrepositories" target="_blank">approved by Europe</a>.</p>
+<h3 id="definitions-dataverse-dataverse-definition-file_1">Dataverse definition File<a class="headerlink" href="#definitions-dataverse-dataverse-definition-file_1" title="Permanent link">&para;</a></h3>
+<p>This definition file will allow Maggot to automatically export the dataset into a data repository based on <a href="https://dataverse.org/" target="_blank">Dataverse</a>. The approach consists of starting from the Maggot metadata file in JSON format and transforming it into another JSON format compatible with Dataverse, knowing that this metadata crosswalk was made possible by choosing the right metadata schema at upstream.</p>
+<p><center>
+<a href="../images/dataverse_fig0.png" data-lightbox="fig0"><img src="../images/dataverse_fig0.png" width="600px"></a>
+</center></p>
+<p>The structure of the <a href="https://guides.dataverse.org/en/latest/api/native-api.html#import-a-dataset-into-a-dataverse-collection" target="_blank">Dataverse JSON</a> output file being known internally, a minimum of information is therefore necessary to carry out the correspondence.</p>
+<p>The file must have 4 columns with headers defined as follows:</p>
+<ul>
+<li>column 1 - <strong>Field</strong> : shortname of the Maggot fields</li>
+<li>column 2 - <strong>Typename</strong> : The corresponding Dataverse fields. </li>
+<li>column 3 - <strong>Type</strong> :The Dataverse field at the top level encapsulating the fields in the “Typename” column where applicable</li>
+<li>column 4 - <strong>Terminology</strong> : Indicates from which vocabulary the mapping should be performed. Concerning the vocabulary to be mapped either <strong><em>i)</em></strong> on a dictionary, you must put the name of the corresponding <a href="#dictionaries">dictionary</a> prefixed with <strong><em>cvlist:</em></strong>, or <strong><em>ii)</em></strong> on ontologies or on a thesaurus, you must specify the corresponding entry in the <a href="#definitions-mapping">mapping definition file</a> prefixing it with <strong><em>cv:</em></strong>.</li>
+</ul>
+<p>Below an example of Dataverse definition file (TSV)
+<center>
+<a href="../images/dataverse_conf.png" data-lightbox="figconf"><img src="../images/dataverse_conf.png" width="600px"></a>
+</center>
+<br></p>
+<p>Example of Dataverse JSON file generated based on the definition file itself given as an example above.</p>
+<ul>
+<li><a href="https://pmb-bordeaux.fr/maggot/metadata/frim1?format=dataverse" target="_blank">Dataverse JSON of the FRIM dataset</a></li>
+</ul>
+<p><br><br></p></section><section class="print-page" id="definitions-zenodo"><h1 id="definitions-zenodo-zenodo-definition-file">Zenodo Definition File<a class="headerlink" href="#definitions-zenodo-zenodo-definition-file" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<p><img src="../images/zenodo_logo.png" width="200px"></p>
+<p>Open source research data repository software, <a href="https://open-research-europe.ec.europa.eu/for-authors/data-guidelines#approvedrepositories" target="_blank">approved by Europe</a>.</p>
+<h3 id="definitions-zenodo-zenodo-definition-file_1">Zenodo definition File<a class="headerlink" href="#definitions-zenodo-zenodo-definition-file_1" title="Permanent link">&para;</a></h3>
+<p>This definition file will allow Maggot to automatically export the dataset into a data repository based on <a href="https://www.openaire.eu/zenodo-guide" target="_blank">Zenodo</a>. The approach consists of starting from the Maggot metadata file in JSON format and transforming it into another JSON format compatible with Zenodo.</p>
+<p>The structure of the <a href="https://developers.zenodo.org/#rest-api" target="_blank">Zenodo JSON</a> output file is not known internally, information on the structure will therefore be necessary to carry out the correspondence.</p>
+<p>Below an example of Zenodo definition file (TSV)
+<center>
+<a href="../images/zenodo_conf.png" data-lightbox="figconf"><img src="../images/zenodo_conf.png" width="600px"></a>
+</center>
+<br></p>
+<p>Example of Zenodo JSON file generated based on the definition file itself given as an example above.</p>
+<ul>
+<li><a href="https://pmb-bordeaux.fr/maggot/metadata/frim1?format=zenodo" target="_blank">Zenodo JSON of the FRIM dataset</a></li>
+</ul>
+<p><br><br></p></section><section class="print-page" id="definitions-json-ld"><h1 id="definitions-json-ld-json-ld-definition-file">JSON-LD Definition File<a class="headerlink" href="#definitions-json-ld-json-ld-definition-file" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<p><img src="../images/jsonld_fig0.png" width="600px"></p>
+<h3 id="definitions-json-ld-json-ld-definition-file_1">JSON-LD definition File<a class="headerlink" href="#definitions-json-ld-json-ld-definition-file_1" title="Permanent link">&para;</a></h3>
+<p>This definition file will allow harvesters to collect structured metadata based on a semantic schema, i.e the fields themselves and not just their content can be associated with a semantic definition (ontology for example) which will then facilitate the link between the metadata and therefore the data (<a href="https://en.wikipedia.org/wiki/JSON-LD" target="_blank">JSON-LD</a>). The chosen semantic schema is based on several metadata schemas.</p>
+<p>The full workflow to "climb the Link Open Data mountain" is resumed by the figure below :
+<center>
+<a href="../images/jsonld_fig1.png" data-lightbox="fig0"><img src="../images/jsonld_fig1.png" width="600px"></a>
+</center></p>
+<p>Metadata schemas used to build the model proposed by default:</p>
+<ul>
+<li><a href="https://schema.org/Dataset" target="_blank">Schema.org</a>, <a href="https://bioschemas.org/profiles/Dataset/1.0-RELEASE" target="_blank">Bioschemas.org</a>, <a href="https://support.datacite.org/docs/datacite-metadata-schema-44" target="_blank">Datacite</a>, <a href="https://rdf-vocabulary.ddialliance.org/discovery.html" target="_blank">DDI-RDF</a>, <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/" target="_blank">DubinCore</a>, <a href="https://docs.google.com/spreadsheets/d/13HP-jI_cwLDHBetn9UKTREPJ_F4iHdAvhjmlvmYdSSw/edit#gid=0" target="_blank">Dataverse</a></li>
+</ul>
+<p>Definition of the <a href="https://niem.github.io/json/reference/json-ld/context/" target="_blank">JSON-LD context</a> using the metadata schemas proposed by default
+<center>
+<a href="../images/jsonld_conf0.png" data-lightbox="conf0"><img src="../images/jsonld_conf0.png" width="600px"></a>
+</center></p>
+<p>The structure of the JSON-LD is not known internally, information on the structure will therefore be necessary to carry out the correspondence.</p>
+<p>Example of JSON-LD definition file (partial) using the metadata schemas proposed by default (TSV)
+<center>
+<a href="../images/jsonld_conf1.png" data-lightbox="conf1"><img src="../images/jsonld_conf1.png" width="800px"></a>
+</center></p>
+<p>Example of JSON-LD file generated based on the definition file itself given as an example above.</p>
+<ul>
+<li><a href="https://pmb-bordeaux.fr/maggot/metadata/frim1?format=jsonld" target="_blank">JSON-LD file of the FRIM dataset</a></li>
+</ul>
+<p><br><br></p></section><section class="print-page" id="definitions-oai-pmh"><h1 id="definitions-oai-pmh-oai-pmh-definition-file">OAI-PMH Definition File<a class="headerlink" href="#definitions-oai-pmh-oai-pmh-definition-file" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<p><img src="../images/oai_fig1.png" width="500px"></p>
+<p><a href="https://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting" target="_blank">OAI-PMH</a> is a protocol developed for <a href="https://en.wikipedia.org/wiki/Metadata_discovery" target="_blank">harvesting metadata</a> descriptions of records in an archive so that services can be built using metadata from many archives.</p>
+<h3 id="definitions-oai-pmh-oai-pmh-definition-file_1">OAI-PMH definition File<a class="headerlink" href="#definitions-oai-pmh-oai-pmh-definition-file_1" title="Permanent link">&para;</a></h3>
+<p>This definition file will allow harvesters to collect metadata structured according to a standard schema (<a href="https://guidelines.openaire.eu/en/latest/literature/use_of_oai_dc.html" target="_blank">OAI-DC</a>).</p>
+<ul>
+<li>
+<p>Based on the <a href="https://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> - <a href="https://www.openarchives.org/OAI/openarchivesprotocol.html" target="_blank">Version 2</a></p>
+</li>
+<li>
+<p>Example of a <a href="../pdf/MAGGOT_OAI-PMH_Validation_Oct2023.pdf" target="_blank">OAI-PMH Data Provider Validation</a></p>
+</li>
+<li>
+<p>Example of OAI-PMH output for a dataset</p>
+<ul>
+<li><a href="https://pmb-bordeaux.fr/maggot/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=oai:pmb-bordeaux.fr::frim1" target="_blank">FRIM dataset</a></li>
+</ul>
+</li>
+</ul>
+<p>The structure of the OAI-PMH output file being known internally, a minimum of information is therefore necessary to carry out the correspondence.</p>
+<p>Example of OAI-PMH definition file (TSV)
+<center>
+<a href="../images/oai_conf.png" data-lightbox="conf"><img src="../images/oai_conf.png" width="600px"></a>
+</center></p>
+<p>Another example of OAI-PMH definition file (TSV) with identifers &amp; vocabulary mapping
+<center>
+<a href="../images/oai_conf2.png" data-lightbox="conf"><img src="../images/oai_conf2.png" width="600px"></a>
+</center></p>
+<p><br><br></p></section><h1 class='nav-section-title-end'>Ended: Definition files</h1><section class="print-page" id="configuration"><h1 id="configuration-configuration">Configuration<a class="headerlink" href="#configuration-configuration" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="configuration-terminology-configuration">Terminology configuration<a class="headerlink" href="#configuration-terminology-configuration" title="Permanent link">&para;</a></h3>
+<p>A single file (<strong><em>web/conf/config_terms.txt</em></strong>) contains all the <a href="#definitions-terminology">terminology</a>. The input and search interfaces are completely generated from this definition file, thus defining each of the fields, their input type (<em>checkbox</em>, <em>dropbox</em>, <em>textbox</em>, ...) and the associated controlled vocabulary (ontology and thesaurus by <abbr title="feature in which an application predicts the rest of a word a user is typing">autocompletion</abbr>, drop-down list according to a list of fixed terms). This is why a configuration and conversion step into <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> format is essential in order to be able to configure all the other modules (example: creation of the <a href="https://www.mongodb.com/basics" target="_blank">MongoDB</a> database schema when starting the application before filling it).</p>
+<p><center>
+<a href="../images/config.png" data-lightbox="fig0"><img src="../images/config.png" width="800px"></a>
+</center></p>
+<ul>
+<li><strong><em>Note</em></strong> : <em>The step numbers shown in the figure above are mentioned in brackets in the text below</em>.</li>
+</ul>
+<h4 id="configuration-tsv-to-json"><abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> to <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr><a class="headerlink" href="#configuration-tsv-to-json" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>This function is used to generate the terminology definition file in <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> format (<strong><em>config_terms.json</em></strong>) and the corresponding <abbr title="vocabulary that allows you to annotate and validate JSON documents.">JSON-Schema</abbr> file (<strong><em>maggot-schema.json</em></strong>) from a tabulated file (<strong>1</strong>). You can either create a terminology definition file in <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> format from scratch (see below to have more details), or extract the file from the current configuration (see <a href="#configuration-json-to-tsv"><abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> to <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr></a>).</p>
+</li>
+<li>
+<p>Once the terminology definition file has been obtained (<strong>2</strong>), you can load it and press 'Submit'.</p>
+</li>
+<li>
+<p>Three files are generated (<strong>3</strong> &amp; <strong>5</strong>):</p>
+</li>
+<li><strong><em>config_terms.json</em></strong> and <strong><em>maggot-schema.json</em></strong> : These files should be placed in the web/conf directory (<strong>3</strong>). A (re)start of the application must be done in full mode (<strong>4</strong>) (<strong><em>sh ./run fullstart</em></strong>)</li>
+<li><strong><em>config_doc.txt</em></strong> (<strong>5</strong>) : This file serves as a template for the documentation of the metadata profile. You should edit it with a spreadsheet program, and fill in the description column (<strong>6</strong>). Then it is used to generate the documentation file in markdown format (see <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> to DOC).</li>
+</ul>
+<h4 id="configuration-tsv-to-doc"><abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> to DOC<a class="headerlink" href="#configuration-tsv-to-doc" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>This function generates the markdown documentation file (<strong><em>doc.md</em></strong>) from the template file (<strong><em>config_doc.txt</em></strong>) which is itself generated from the metadata definition file (<strong><em>config_terms.txt</em></strong>, cf <a href="#configuration-tsv-to-json"><abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> to <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr></a>).</p>
+</li>
+<li>
+<p>Once the template file for the documentation (<strong><em>config_doc.txt</em></strong>) has been edited and documented (<strong>6</strong>) (see below to have more details), you can load it and press <em>Submit</em> button.</p>
+</li>
+<li>
+<p>The documentation file in markdown format (<strong><em>doc.md</em></strong>) is thus generated (<strong>7</strong>) and must be placed in the <strong><em>web/docs</em></strong> directory (<strong>8</strong>). Users will have access to this documentation file via the web interface, in the documentation section, heading "<strong>Metadata</strong>".</p>
+</li>
+</ul>
+<h4 id="configuration-json-to-tsv"><abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> to <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr><a class="headerlink" href="#configuration-json-to-tsv" title="Permanent link">&para;</a></h4>
+<ul>
+<li>This function allows you to extract the terminology definition file in <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> format (<strong><em>config_terms.txt</em></strong>) from the current configuration. This allows you to start from this file, either to adapt your own metadata profile or simply to modify it slightly.</li>
+</ul>
+<p><br></p></section><section class="print-page" id="dictionaries"><h1 id="dictionaries-dictionaries">Dictionaries<a class="headerlink" href="#dictionaries-dictionaries" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="dictionaries-presentation">Presentation<a class="headerlink" href="#dictionaries-presentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The use of dictionaries has no other purpose to facilitate the entry of metadata, entry which can be long and repetitive in generalist data warehouses (such as repository based on Dataverse).</li>
+<li>Dictionaries allow you to record multiple information necessary to define an entity, such as the names of people or even the funders. These information, once entered and saved in a file called a dictionary, can be subsequently associated with the corresponding entity. </li>
+<li>The dictionaries offered by default are: people (<strong><em>people</em></strong>), funders (<strong><em>grant</em></strong>), data producers (<strong><em>producer</em></strong>), as well as a vocabulary dictionary (<strong><em>vocabulary</em></strong>) allowing you to mix ontologies and thesauri from several sources.</li>
+<li>To add a new dictionary, simply create a directory under <em><a href="https://github.com/inrae/pgd-mmdt/tree/main/web/cvlist" target="_blank">web/cvlist</a></em> then putting the files corresponding to the dictionary inside. Dictionaries will be automatically found by browsing this directory.</li>
+<li>Dictionary files are made using a simple spreadsheet then exported in <abbr title="Open text format representing tabular data as &quot;Tab-Separated Values&quot;. Each row corresponds to a table row and the cells in a row are separated by a tab">TSV</abbr> format.</li>
+<li>Dictionaries are accessed through secure access limited to administrators allowing their editing. The login is by default '<strong><em>admin</em></strong>'. You can add another account for consultation only using the following command: 
+<div class="highlight"><pre><span></span><code>sh ./run passwd &lt;user&gt;
+</code></pre></div></li>
+</ul>
+<p><br></p>
+<h4 id="dictionaries-the-people-dictionary">The people dictionary<a class="headerlink" href="#dictionaries-the-people-dictionary" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><em>Note</em></strong> : must not be changed in its format nor in its name.</li>
+<li>
+<p>Like any dictionary, there must be 3 files (see below). Please note that the names of these files must always contain the name of the dictionary, i.e. same as the directory.
+<center>
+<a href="../images/dico0.png" data-lightbox="fig0"><img src="../images/dico0.png" width="600px"></a>
+</center><br></p>
+</li>
+<li>
+<p>The format of the file containing the dictionary data (<em>people.txt</em>) is defined by another file (<em>people_format.txt</em>).</p>
+</li>
+</ul>
+<p><center>
+<a href="../images/dico2.png" data-lightbox="fig2"><img src="../images/dico2.png" width="500px"></a>
+</center><br></p>
+<ul>
+<li>Thus, we know that the people dictionary must contain 5 columns (last name, first name, institution, <a href="https://info.orcid.org/researchers/" target="_blank">ORCID</a> number and email address) and that some fields are mandatory (last name, first name, institution) and others optional (ORCID number, email address).</li>
+<li>Each of the fields must respect a format specified by a <a href="https://www.w3schools.com/js/js_regexp.asp" target="_blank">regular expression</a> in order to be accepted as valid.</li>
+<li>Optionally, you can connect an <a href="https://en.wikipedia.org/wiki/Web_API" target="_blank">web API</a> to each of the fields in order to make an entry by autocompletion from a remote register. Currently only ROR (<a href="https://ror.org/" target="_blank">Research Organization Registry</a>) web API is possible but the mechanism is in place for new extensions.</li>
+<li>The third file, a very simple script written in <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, defines the way to retrieve the list of names (here by containing the first and last name). Note that the name of the variable must always be identical to that of the dictionary.
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">people</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="c1">// Each item in the &#39;people&#39; list consists of the first two columns (0,1) separated by a space</span>
+<span class="nx">get_dictionary_values</span><span class="p">(</span><span class="s1">&#39;people&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">merge</span><span class="o">=</span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="mf">1</span><span class="p">])</span><span class="w"> </span>
+</code></pre></div></li>
+<li>
+<p>Below, an example is given when modifying a record. When you click on the <em>Institute</em> field which is connected to the ROR web API, the drop-down list of reseach organizations that can correspond in the register appears, if there are any.
+<center>
+<a href="../images/dico1.png" data-lightbox="fig1"><img src="../images/dico1.png" width="600px"></a>
+</center></p>
+</li>
+<li>
+<p><strong>Note</strong>: It is possible to edit dictionaries, by adding an entry for example, and at the same time be able to immediately find this new entry in the metadata entry in the Maggot tool. Indeed each dictionary is reloaded into memory as soon as the corresponding input box is clicked. See <a href="../images/dico6.png" data-lightbox="fig6">an illustration</a>.</p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="dictionaries-other-dictionaries">Other dictionaries<a class="headerlink" href="#dictionaries-other-dictionaries" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Funders</strong> : The dictionary of the funders allows you to define the funding agency, project ID and its corresponding URL.
+<center>
+<a href="../images/dico9.png" data-lightbox="fig9"><img src="../images/dico9.png" width="600px"></a>
+</center><br></p>
+<ul>
+<li><strong><em>Note</em></strong> : can be renamed but while keeping its format (same columns and same layout).
+<center>
+<a href="../images/dico3.png" data-lightbox="fig3"><img src="../images/dico3.png" width="400px"></a>
+</center><br></li>
+</ul>
+</li>
+<li>
+<p><strong>Producers</strong> : The dictionary of the data producers allows you to define their Institute and  project ID and their corresponding URL. Optionally, you can add the URL of the logo.
+<center>
+<a href="../images/dico8.png" data-lightbox="fig8"><img src="../images/dico8.png" width="600px"></a>
+</center><br></p>
+<ul>
+<li><strong><em>Note</em></strong> : can be renamed but while keeping its format (same columns and same layout).
+<center>
+<a href="../images/dico4.png" data-lightbox="fig4"><img src="../images/dico4.png" width="400px"></a>
+</center><br></li>
+</ul>
+</li>
+<li>
+<p><strong>Vocabulary</strong> : Use this dictionary for mixing thesauri and ontologies in order to better target the entire controlled vocabulary of its field of application. Only the vocabulary is mandatory, the URL linked to an ontology or a thesaurus is optional. See <a href="#definitions-vocabulary">Vocabulary</a> section to learn the extent of the possibilities concerning vocabulary in Maggot.
+<center>
+<a href="../images/dico7.png" data-lightbox="fig7"><img src="../images/dico7.png" width="600px"></a>
+</center><br></p>
+<ul>
+<li><strong><em>Note</em></strong> : can be duplicated but while keeping its format (same columns and same layout).
+<center>
+<a href="../images/dico5.png" data-lightbox="fig5"><img src="../images/dico5.png" width="400px"></a>
+</center><br></li>
+</ul>
+</li>
+</ul>
+<p><br></p></section><section class="print-page" id="publish"><h1 id="publish-publish-metadata">Publish Metadata<a class="headerlink" href="#publish-publish-metadata" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="publish-publish-metadata_1">Publish Metadata<a class="headerlink" href="#publish-publish-metadata_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Once we have decided to publish our metadata with possibly our data, we can choose the repository that suits us. Currently repositories based on <a href="https://dataverse.org/" target="_blank">Dataverse</a> and <a href="https://www.openaire.eu/zenodo-guide" target="_blank">Zenodo</a> are supported, both being <a href="https://open-research-europe.ec.europa.eu/for-authors/data-guidelines#approvedrepositories" target="_blank">Europe-approved repositories</a>.</li>
+<li>
+<p>Using an approach that might be called “<a href="https://opendatahandbook.org/glossary/en/terms/machine-readable/" target="_blank">machine-readable</a> metadata,” it is possible to populate metadata for a dataset into one of the proposed data repositories via its <a href="https://en.wikipedia.org/wiki/Web_API" target="_blank">web API</a>, provided that you have taken care to correctly define your metadata schema so that it is possible to make a correspondence with the chosen data repository using a mapping definition file.</p>
+</li>
+<li>
+<p>The principle is illustrated by the figure above.</p>
+</li>
+</ul>
+<p><center>
+<a href="../images/publish_fig1.png" data-lightbox="fig1"><img src="../images/publish_fig1.png" width="800px"></a>
+</center></p>
+<ul>
+<li>We start from the Maggot JSON format metadata file generated from the web interface and based on the metadata profile defined by the terminology definition files. </li>
+<li>Then from a file defining the correspondence between the Maggot fields and those of the target repository, we can perform a <a href="#chats-chat4" target="_blank">metadata crosswalk</a> to the JSON format supported by the web API of the target repository.</li>
+<li>During the process we enrich the metadata with controlled vocabularies based either on dictionaries or on thesauri and/or ontologies. For the latter cases, we use the web APIs of these sources to perform the mapping (see the <a href="#definitions-mapping">definition of mapping</a>).</li>
+<li>Finally, to be able to carry out the transfer i.e. the submission to the target repository (we say "push" for short), we first need to connect to the repository in order to retrieve the key (the <a href="https://www.wallarm.com/what/what-is-an-api-token-quick-guide" target="_blank">API token</a>) authorizing us to submit the dataset. This obviously assumes that we have the privileges (creation/modification rights) to do so.</li>
+</ul>
+<h1 id="publish-httpswwwgooglecomsearchqmetadatacrosswalkdefinitionoqmetadatacrosswalk"><a href="https://www.google.com/search?q=metadata+crosswalk+definition&amp;oq=metadata+crosswalk">https://www.google.com/search?q=metadata+crosswalk+definition&amp;oq=metadata+crosswalk</a><a class="headerlink" href="#publish-httpswwwgooglecomsearchqmetadatacrosswalkdefinitionoqmetadatacrosswalk" title="Permanent link">&para;</a></h1></section>
+                        <h1 class='nav-section-title' id='section-publication'>
+                            Publication <a class='headerlink' href='#section-publication' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="publish-dataverse"><h1 id="publish-dataverse-publish-into-dataverse">Publish into Dataverse<a class="headerlink" href="#publish-dataverse-publish-into-dataverse" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="publish-dataverse-publish-into-dataverse_1">Publish into Dataverse<a class="headerlink" href="#publish-dataverse-publish-into-dataverse_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Based on the <a href="https://guides.dataverse.org/en/latest/api/native-api.html" target="_blank">Dataverse Native API</a></li>
+</ul>
+<p><strong>1</strong> - To submit metadata to a Dataverse repository, you must first select a dataset either from the drop-down list corresponding to the datasets listed on the data storage space or a metadata file from your local disk.</p>
+<p><strong>2</strong> - You then need to connect to the repository in order to retrieve the key (the  <a href="https://www.wallarm.com/what/what-is-an-api-token-quick-guide" target="_blank">API token</a>) authorizing you to submit the dataset. This obviously assumes that you have the privileges (creation/modification rights) to do so.</p>
+<p><strong>3</strong> - After choosing the repository URL, you must also specify on which dataverse collection you want to deposit the datasets. As previously, you must have write rights to this dataverse collection.</p>
+<p><center>
+<a href="../images/dataverse_fig1.png" data-lightbox="fig1"><img src="../images/dataverse_fig1.png" width="800px"></a>
+</center></p>
+<p><br></p>
+<ul>
+<li>Then, all you have to do is click on '<strong>Publish</strong>' to "<em>push</em>" the metadata to the repository. The figure below illustrates based on an example how the metadata is recorded in the repository as well as the <em>Mapping</em> corresponding to the fields linked to <em>Controlled Vocabularies</em>.</li>
+</ul>
+<p><center><img src="../images/dataverse_fig2.png" width="800px"></center></p>
+<p><br></p>
+<h4 id="publish-dataverse-deposit-data-files">Deposit data files<a class="headerlink" href="#publish-dataverse-deposit-data-files" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>If you also want to deposit data files at the same time as the metadata, you will need:</p>
+<ul>
+<li>
+<p><strong>1</strong> - declare the files to be deposited in the resources; these same files must also be present in the storage space.</p>
+</li>
+<li>
+<p><strong>2</strong> - create a semaphore file (<em>META_datafile_ok.txt</em>); its sole presence, independently of its content (which may be empty) will authorize the transfer. Indeed, the creation of such a file guarantees that the user has actually write rights to the storage space corresponding to his dataset. This prevents someone else from publishing the data without having the right to do so. This mechanism also avoids having to manage user accounts on Maggot.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><center>
+<a href="../images/dataverse_fig3.png" data-lightbox="fig3"><img src="../images/dataverse_fig3.png" width="800px"></a>
+</center></p>
+<p><br></p>
+<ul>
+<li>The figure below illustrates based on an example how data files appear on the repository with annotations corresponding to those created in Maggot.
+<center>
+<a href="../images/dataverse_fig4.png" data-lightbox="fig4"><img src="../images/dataverse_fig4.png" width="800px"></a>
+</center></li>
+</ul>
+<p><br></p></section><section class="print-page" id="publish-zenodo"><h1 id="publish-zenodo-publish-into-zenodo">Publish into Zenodo<a class="headerlink" href="#publish-zenodo-publish-into-zenodo" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="publish-zenodo-publish-into-zenodo_1">Publish into Zenodo<a class="headerlink" href="#publish-zenodo-publish-into-zenodo_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Based on the <a href="https://developers.zenodo.org/#rest-api" target="_blank">Zenodo REST-API</a></li>
+</ul>
+<p><strong>1</strong> - To submit metadata to a Zenodo repository, you must first select a dataset either from the drop-down list corresponding to the datasets listed on the data storage space or a metadata file from your local disk.</p>
+<p><strong>2</strong> - Unless you have previously saved your <a href="https://www.wallarm.com/what/what-is-an-api-token-quick-guide" target="_blank">API token</a>, you must create a new one and copy and paste it before validating it. Before validating, you must check the deposit:access and deposit:write boxes in order to obtain creation and modification rights with this token.</p>
+<p><strong>3</strong> - After choosing the repository URL, you can optionally choose a community to which the dataset will be linked. By default, you can leave empty this field.</p>
+<ul>
+<li><strong><em>Warning</em></strong> : given the <a href="https://help.zenodo.org/docs/about/whats-changed/#deposit-communities" target="_blank">new changes</a> introduced to the Zenodo validation process (<em>October 2023</em>), it seems that it is no longer possible to validate a community via API. Only a choice via the Zenodo web interface will allow you to do so in order to be validated later by the manager of this community.</li>
+</ul>
+<p><center>
+<a href="../images/zenodo_fig1.png" data-lightbox="fig1"><img src="../images/zenodo_fig1.png" width="800px"></a>
+</center></p>
+<p><br></p>
+<h4 id="publish-zenodo-deposit-data-files">Deposit data files<a class="headerlink" href="#publish-zenodo-deposit-data-files" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>If you also want to deposit data files at the same time as the metadata, you will need (see figure below)</p>
+<ul>
+<li>
+<p><strong>1</strong> - declare the files to be deposited in the resources (<em><strong>1</strong></em>) ; these same files must also be present in the storage space.</p>
+</li>
+<li>
+<p><strong>2</strong> - create a semaphore file (<em>META_datafile_ok.txt</em>) (<em><strong>2</strong></em>); its sole presence, independently of its content will authorize the transfer. Indeed, the creation of such a file guarantees that the user has actually write rights to the storage space corresponding to his dataset. This prevents someone else from publishing the data without having the right to do so. This mechanism also avoids having to manage user accounts on Maggot.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Then, all you have to do is click on '<strong>Publish</strong>' to "<em>push</em>" the metadata and data to the repository (<em><strong>3</strong></em>).</p>
+</li>
+<li>
+<p>After submission and if everything went well, a link to the deposit will be given to you (<em><strong>4</strong></em>).</p>
+</li>
+</ul>
+<p><center>
+<a href="../images/zenodo_fig5.png" data-lightbox="fig5"><img src="../images/zenodo_fig5.png" width="800px"></a>
+</center></p>
+<p><br></p>
+<ul>
+<li>The figure below illustrates based on an example how the metadata and data is recorded in the repository.</li>
+</ul>
+<p><center>
+<a href="../images/zenodo_fig2.png" data-lightbox="fig2"><img src="../images/zenodo_fig2.png" width="800px"></a>
+<a href="../images/zenodo_fig3.png" data-lightbox="fig3"><img src="../images/zenodo_fig3.png" width="800px"></a>
+<a href="../images/zenodo_fig4.png" data-lightbox="fig4"><img src="../images/zenodo_fig4.png" width="800px"></a>
+</center></p>
+<p><br></p></section><h1 class='nav-section-title-end'>Ended: Publication</h1><section class="print-page" id="about"><h1 id="about-about">About<a class="headerlink" href="#about-about" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<h3 id="about-background">Background<a class="headerlink" href="#about-background" title="Permanent link">&para;</a></h3>
+<h4 id="about-motives">Motives<a class="headerlink" href="#about-motives" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Meet the challenges of organizing, documenting, storing and sharing data from a site, a project or a structure (unit, platform, etc.).</li>
+<li>Have visibility of what is produced within the collective: datasets, software, databases, images, sounds, videos, analyses, codes, etc.</li>
+<li>Fall within an open science quality approach for sharing and reproducibility.</li>
+<li>Promote <abbr title="Findable, Accessible, Interoperable and Reusable">FAIR</abbr> (at least the Findable &amp; Accessible criteria) within the collective.</li>
+<li>Raise awareness among newcomers and students about a better description of what they produce.</li>
+</ul>
+<h4 id="about-state-of-need">State of need<a class="headerlink" href="#about-state-of-need" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Implementing a data management plan imposes prerequisites such as the externalization of data to be preserved outside of users' disk space. This does not only concern published data but all data produced during the duration of a project. Above all, this outsourcing makes it possible to gather the data in one place and already constitutes a first-level backup. This becomes even more necessary when temporary agents (doctoral students, post-docs, interns, fixed-term contracts) are involved in data production.</li>
+<li>Consequently, the concern arises about the organization of these storage spaces. Should they be harmonized, i.e. impose good practices such as <em>i</em>) the naming of folders and files, <em>ii</em>) a folder structure (docs, data, scripts, etc.), <em>iii</em>) the use of README files, etc.</li>
+<li>At a minimum, using a README file seems the simplest and least restrictive. But then the question arises “what to put in it”? Templates can be offered to simplify their writing. But then the question arises of how to use them effectively when we want to find information? With what vocabulary?</li>
+</ul>
+<h4 id="about-proposed-approach">Proposed approach<a class="headerlink" href="#about-proposed-approach" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The two main ideas behind the tool are:<ul>
+<li>Make the data storage space a data repository without having to move the data, then ensure that the metadata gets to the data.</li>
+<li>Be able to “capture” the user’s metadata as easily as possible by using their vocabulary.</li>
+</ul>
+</li>
+<li>Concerning the first idea: "Just" place a metadata file (<abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> format) describing the project data in each subdirectory, and then find the projects and/or data corresponding to specific criteria. The choice fell on the <abbr title="JavaScript Object Notation : format used to represent structured information">JSON</abbr> format, very suitable for describing metadata, readable by both humans and machines.</li>
+<li>
+<p>Concerning the second idea: Given the diversity of the fields, the approach chosen is to be both the most flexible and the most pragmatic possible by allowing users to choose their own vocabulary (controlled or not) corresponding to the reality of their field and their activities. However, a good approach is as much as possible to use only controlled vocabulary, that is to say relevant and sufficient vocabulary used as a reference in the field concerned to allow users to describe a project and its context without having to add additional terms. To this end, the tool must allow users a progressive approach towards the adoption of standardized controlled vocabularies (thesauri or even ontologies).</p>
+</li>
+<li>
+<p>With the approach proposed by Maggot, initially there is no question of opening the data, but of managing metadata associated with the data on a storage space with a precise perimeter represented by the collective (unit, team, project , platform, …). The main characteristic of the tool is, above all, to “capture” the metadata as easily as possible according to a well-chosen metadata schema. However, the opening of data via their metadata must be a clearly stated objective within the framework of projects financed by public institutions (e.g Europe). Therefore if you have taken care to correctly define your metadata schema so that it is possible to make a <a href="#chats-chat4" target="_blank">metadata crosswalk</a> (using a mapping file) with a data repository recognized by the international community, then you can easily "push" its metadata with the data without having re-enter anything.</p>
+</li>
+</ul>
+<hr />
+<h3 id="about-links">Links<a class="headerlink" href="#about-links" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Source code on Github</strong> : <a href="https://github.com/inrae/pgd-mmdt" target="_blank">inrae/pgd-mmdt</a></li>
+<li><strong>Issues tracker</strong> : <a href="https://github.com/inrae/pgd-mmdt/issues" target="_blank">inrae/pgd-mmdt/issues</a></li>
+<li><strong>Instance online</strong> : <a href="https://pmb-bordeaux.fr/maggot/" target="_blank">INRAE UMR 1322 BFP</a></li>
+</ul>
+<h3 id="about-publication">Publication<a class="headerlink" href="#about-publication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Daniel Jacob, François Ehrenmann, Romain David, Joseph Tran, Cathleen Mirande-Ney, Philippe Chaumeil, An ecosystem for producing and sharing metadata within the web of <abbr title="Findable, Accessible, Interoperable and Reusable">FAIR</abbr> Data, GigaScience, Volume 14, 2025, giae111, <a href="https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giae111/7945442" target="_blank">DOI:10.1093/gigascience/giae111</a></li>
+</ul>
+<h3 id="about-contacts">Contacts<a class="headerlink" href="#about-contacts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Daniel Jacob (<a href="https://eng-bfp.bordeaux-aquitaine.hub.inrae.fr/" target="_blank">INRAE UMR BFP</a>) : <a href="https://orcid.org/0000-0002-6687-7169" target="_blank">daniel.jacob @ inrae.fr</a></li>
+</ul>
+<h3 id="about-designers-developers">Designers / Developers<a class="headerlink" href="#about-designers-developers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Daniel Jacob (<a href="https://eng-bfp.bordeaux-aquitaine.hub.inrae.fr/" target="_blank">INRAE UMR BFP</a>) | CATI <a href="https://prosodie.cati.inrae.fr/" target="_blank">PROSODIe</a></p>
+</li>
+<li>
+<p>François Ehrenmann (<a href="https://www6.bordeaux-aquitaine.inrae.fr/biogeco_eng/" target="_blank">INRAE UMR BioGECO</a>) | CATI <a href="https://gedeop.cati.inrae.fr/" target="_blank">GEDEOP</a></p>
+</li>
+<li>
+<p>Philippe Chaumeil (<a href="https://www6.bordeaux-aquitaine.inrae.fr/biogeco_eng/" target="_blank">INRAE UMR BioGECO</a>)</p>
+</li>
+</ul>
+<h3 id="about-contributors">Contributors<a class="headerlink" href="#about-contributors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Edouard Guitton (<a href="https://www.inrae.fr/en/divisions/sa" target="_blank">INRAE Dept. SA</a>, <a href="https://www.emergin.fr/emergin_eng/" target="_blank">Emerg'IN</a>)</p>
+</li>
+<li>
+<p>Stéphane Bernillon (<a href="https://eng-mycsa.bordeaux-aquitaine.hub.inrae.fr/" target="_blank">INRAE UR MycSA</a>)</p>
+</li>
+<li>
+<p>Joseph TRAN (<a href="https://eng-egfv.bordeaux-aquitaine.hub.inrae.fr/" target="_blank">INRAE UMR EGFV</a>) | CATI <a href="https://www.cesgo.org/catibaric/" target="_blank">BARIC</a></p>
+</li>
+</ul>
+<h3 id="about-license">License<a class="headerlink" href="#about-license" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 - <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3</a></li>
+</ul>
+<!-- https://www.google.com/search?q=metadata+crosswalk+definition&oq=metadata+crosswalk -->
+
+<p><br><br></p>
+<p><center>
+<a href="../images/LogoCloud.png" data-lightbox="fig1"><img src="../images/LogoCloud.png" width="800px"></a>
+</center></p>
+<p><br><br></p></section></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      INRAE, 2022-2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "/", "features": ["toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../js/jquery-2.1.1.min.js"></script>
+      
+        <script src="../js/lightbox.min.js"></script>
+      
+        <script src="../js/mermaid.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>

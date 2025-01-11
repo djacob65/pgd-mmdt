@@ -1,0 +1,1029 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Maggot, Metadata aggregation on data storage">
+      
+      
+        <meta name="author" content="Daniel Jacob">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Controlled Vocabulary Management - Maggot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/pdfextra.css">
+    
+      <link rel="stylesheet" href="../../css/lightbox.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-are-the-steps-to-building-our-own-controlled-vocabulary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Maggot" class="md-header__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maggot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Controlled Vocabulary Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Maggot" class="md-nav__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Maggot
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorial/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Quick tutorial
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quick tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/describe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Entry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../definitions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Definition files
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Definition files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/json-ld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON-LD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/oai-pmh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAI-PMH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dictionaries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dictionaries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../publish/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Publication
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Publication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publish/dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publish/zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Controlled Vocabulary Management</h1>
+
+<h2 id="what-are-the-steps-to-building-our-own-controlled-vocabulary">What are the steps to building our own controlled vocabulary ?<a class="headerlink" href="#what-are-the-steps-to-building-our-own-controlled-vocabulary" title="Permanent link">&para;</a></h2>
+<p>Creating a controlled vocabulary is a systematic process that involves several key steps. Here’s a detailed guide to help you build your own controlled vocabulary:</p>
+<h3 id="1-define-the-purpose-and-scope">1. <strong>Define the Purpose and Scope</strong><a class="headerlink" href="#1-define-the-purpose-and-scope" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Determine why you need a controlled vocabulary. It could be for improving search accuracy, ensuring consistent data categorization, or facilitating communication among team members.</li>
+<li><strong>Scope</strong>: Define the boundaries of the vocabulary. What subjects, domains, or types of information will it cover?</li>
+</ul>
+<h3 id="2-gather-stakeholders-and-form-a-team">2. <strong>Gather Stakeholders and Form a Team</strong><a class="headerlink" href="#2-gather-stakeholders-and-form-a-team" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Stakeholders</strong>: Identify and involve stakeholders who will use or benefit from the controlled vocabulary.</li>
+<li><strong>Team</strong>: Assemble a team of subject matter experts, information architects, librarians, and end-users to contribute to and review the vocabulary.</li>
+</ul>
+<h3 id="3-collect-and-analyze-source-material">3. <strong>Collect and Analyze Source Material</strong><a class="headerlink" href="#3-collect-and-analyze-source-material" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Source Material</strong>: Gather documents, datasets, and other materials relevant to the scope of your vocabulary.</li>
+<li><strong>Analysis</strong>: Analyze the material to identify key terms, concepts, and relationships. Look for frequently used terms and concepts that are essential to your domain.</li>
+</ul>
+<h3 id="4-develop-a-list-of-terms">4. <strong>Develop a List of Terms</strong><a class="headerlink" href="#4-develop-a-list-of-terms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Initial List</strong>: Create an initial list of terms based on the analysis.</li>
+<li><strong>Standardization</strong>: Standardize the terms to ensure consistency. Decide on preferred terms, synonyms, and variants.</li>
+</ul>
+<h3 id="5-define-relationships">5. <strong>Define Relationships</strong><a class="headerlink" href="#5-define-relationships" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Hierarchical Relationships</strong>: Establish broader and narrower term relationships (e.g., parent/child, broader term/narrower term).</li>
+<li><strong>Associative Relationships</strong>: Identify related terms that are conceptually linked but not hierarchically.</li>
+<li><strong>Equivalence Relationships</strong>: Map synonyms and near-synonyms to preferred terms.</li>
+</ul>
+<h3 id="6-create-definitions-and-scope-notes">6. <strong>Create Definitions and Scope Notes</strong><a class="headerlink" href="#6-create-definitions-and-scope-notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Definitions</strong>: Write clear, concise definitions for each term to avoid ambiguity.</li>
+<li><strong>Scope Notes</strong>: Add notes to clarify the context and usage of terms, particularly for terms that might be misunderstood.</li>
+</ul>
+<h3 id="7-test-the-vocabulary">7. <strong>Test the Vocabulary</strong><a class="headerlink" href="#7-test-the-vocabulary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pilot Testing</strong>: Implement the vocabulary in a controlled setting to test its effectiveness.</li>
+<li><strong>Feedback</strong>: Gather feedback from users and stakeholders to identify any issues or gaps.</li>
+</ul>
+<h3 id="8-review-and-refine">8. <strong>Review and Refine</strong><a class="headerlink" href="#8-review-and-refine" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Iterative Refinement</strong>: Based on feedback, refine the vocabulary. This may involve adding new terms, modifying existing terms, or changing relationships.</li>
+<li><strong>Version Control</strong>: Keep track of changes and maintain version control to document the evolution of the vocabulary.</li>
+</ul>
+<h3 id="9-document-the-vocabulary">9. <strong>Document the Vocabulary</strong><a class="headerlink" href="#9-document-the-vocabulary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Documentation</strong>: Create comprehensive documentation that includes the list of terms, definitions, relationships, scope notes, and guidelines for use.</li>
+<li><strong>User Guide</strong>: Develop a user guide to help stakeholders understand how to use the controlled vocabulary effectively.</li>
+</ul>
+<h3 id="10-implement-and-maintain">10. <strong>Implement and Maintain</strong><a class="headerlink" href="#10-implement-and-maintain" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Implementation</strong>: Integrate the controlled vocabulary into your systems, such as databases, content management systems, and search engines.</li>
+<li><strong>Maintenance Plan</strong>: Establish a maintenance plan to regularly review and update the vocabulary to ensure it remains relevant and accurate. Assign responsibility for ongoing management.</li>
+</ul>
+<h3 id="11-train-users">11. <strong>Train Users</strong><a class="headerlink" href="#11-train-users" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Training Sessions</strong>: Conduct training sessions for users to ensure they understand how to apply the controlled vocabulary.</li>
+<li><strong>Support Resources</strong>: Provide support resources, such as FAQs, tutorials, and help desks.</li>
+</ul>
+<h3 id="12-monitor-and-evaluate">12. <strong>Monitor and Evaluate</strong><a class="headerlink" href="#12-monitor-and-evaluate" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Monitoring</strong>: Continuously monitor the usage of the vocabulary to ensure it meets the needs of the users.</li>
+<li><strong>Evaluation</strong>: Periodically evaluate the effectiveness of the vocabulary and make adjustments as necessary.</li>
+</ul>
+<p>By following these steps, you can develop a controlled vocabulary that improves information retrieval, enhances data consistency, and supports effective communication within your organization.</p>
+<hr />
+<h2 id="what-are-the-differences-between-thesauri-ontologies-or-simple-vocabulary-dictionaries-in-which-cases-should-each-of-them-be-favored">What are the differences between thesauri, ontologies or simple vocabulary dictionaries? In which cases should each of them be favored?<a class="headerlink" href="#what-are-the-differences-between-thesauri-ontologies-or-simple-vocabulary-dictionaries-in-which-cases-should-each-of-them-be-favored" title="Permanent link">&para;</a></h2>
+<p>Thesauri, ontologies, and simple vocabulary dictionaries are all tools for organizing and managing information, but they differ in complexity, structure, and use cases. Here’s a breakdown of their differences and when to use each:</p>
+<h3 id="thesauri">Thesauri<a class="headerlink" href="#thesauri" title="Permanent link">&para;</a></h3>
+<p><strong>Definition</strong>:
+- A thesaurus is a controlled vocabulary that organizes terms into a structured hierarchy, showing relationships such as synonyms, antonyms, broader terms (BT), narrower terms (NT), and related terms (RT).</p>
+<p><strong>Structure</strong>:
+- <strong>Synonyms</strong>: Provides alternative words with similar meanings.
+- <strong>Hierarchical Relationships</strong>: Shows broader and narrower terms.
+- <strong>Associative Relationships</strong>: Connects related terms that are not hierarchically linked.</p>
+<p><strong>Use Cases</strong>:
+- <strong>Information Retrieval</strong>: Enhances search capabilities by providing alternative terms and related concepts.
+- <strong>Indexing and Cataloging</strong>: Standardizes terms for consistent categorization of information.
+- <strong>Library and Archival Systems</strong>: Organizes collections for easier access and discovery.</p>
+<p><strong>When to Use</strong>:
+- When you need to manage a large set of terms with hierarchical and associative relationships.
+- When you want to improve search functionality by including synonyms and related terms.</p>
+<h3 id="ontologies">Ontologies<a class="headerlink" href="#ontologies" title="Permanent link">&para;</a></h3>
+<p><strong>Definition</strong>:
+- An ontology is a formal representation of a set of concepts within a domain and the relationships between those concepts. It includes not just the terms, but also the rules and constraints that govern their use.</p>
+<p><strong>Structure</strong>:
+- <strong>Concepts</strong>: Detailed definitions of domain-specific concepts.
+- <strong>Relationships</strong>: Various types of relationships between concepts, including hierarchical, associative, and more complex logical relationships.
+- <strong>Attributes</strong>: Properties and characteristics of concepts.
+- <strong>Rules and Constraints</strong>: Logical rules that define how concepts can interact.</p>
+<p><strong>Use Cases</strong>:
+- <strong>Semantic Web and AI</strong>: Facilitates data integration, sharing, and interoperability in web and AI applications.
+- <strong>Knowledge Representation</strong>: Provides a detailed and formalized structure for representing domain knowledge.
+- <strong>Complex Data Integration</strong>: Integrates heterogeneous data sources by providing a common framework.</p>
+<p><strong>When to Use</strong>:
+- When you need a highly detailed and formal representation of knowledge with complex relationships.
+- When integrating diverse data sources and ensuring semantic interoperability is crucial.
+- For advanced applications in artificial intelligence, natural language processing, and the Semantic Web.</p>
+<h3 id="simple-vocabulary-dictionaries">Simple Vocabulary Dictionaries<a class="headerlink" href="#simple-vocabulary-dictionaries" title="Permanent link">&para;</a></h3>
+<p><strong>Definition</strong>:
+- A simple vocabulary dictionary is a basic list of terms and their definitions, without structured relationships between terms.</p>
+<p><strong>Structure</strong>:
+- <strong>Terms</strong>: A list of words or phrases.
+- <strong>Definitions</strong>: Brief explanations or meanings of each term.</p>
+<p><strong>Use Cases</strong>:
+- <strong>Glossaries</strong>: Provides quick reference for understanding terms and definitions.
+- <strong>Basic Cataloging</strong>: Lists terms for simple categorization without the need for complex relationships.
+- <strong>Learning and Education</strong>: Helps learners understand basic concepts and terminology.</p>
+<p><strong>When to Use</strong>:
+- When you need a straightforward reference tool for terms and their definitions.
+- For simple documentation where relationships between terms are not necessary.
+- When building foundational knowledge without the need for detailed hierarchical or associative structures.</p>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Thesauri</strong> are ideal for organizing terms with hierarchical and associative relationships, enhancing search and retrieval in large datasets.</li>
+<li><strong>Ontologies</strong> provide a detailed and formal structure for representing complex domain knowledge and relationships, suitable for advanced applications in AI and data integration.</li>
+<li><strong>Simple Vocabulary Dictionaries</strong> offer a basic list of terms and definitions, useful for straightforward reference and basic documentation.</li>
+</ul>
+<p>Choosing the right tool depends on your specific needs regarding the complexity of the relationships between terms, the level of detail required, and the intended application.</p>
+<hr />
+<h2 id="concerning-descriptive-metadata-can-we-envisage-a-gradual-evolution-in-the-use-of-simple-dictionaries-then-moving-to-thesauri-or-even-ontologies">Concerning descriptive metadata, can we envisage a gradual evolution in the use of simple dictionaries, then moving to thesauri, or even ontologies?<a class="headerlink" href="#concerning-descriptive-metadata-can-we-envisage-a-gradual-evolution-in-the-use-of-simple-dictionaries-then-moving-to-thesauri-or-even-ontologies" title="Permanent link">&para;</a></h2>
+<p>Yes, it is both practical and beneficial to envisage a gradual evolution in the use of descriptive metadata, starting with simple dictionaries and progressing to thesauri and ontologies as the needs and complexity of your data management grow. Here’s how you can approach this evolutionary path:</p>
+<h3 id="stage-1-simple-vocabulary-dictionaries">Stage 1: Simple Vocabulary Dictionaries<a class="headerlink" href="#stage-1-simple-vocabulary-dictionaries" title="Permanent link">&para;</a></h3>
+<p><strong>Initial Implementation</strong>:
+- <strong>Scope</strong>: Begin with a simple vocabulary dictionary to establish basic terminology and definitions.
+- <strong>Purpose</strong>: Ensure consistency in the use of terms across your organization or system.
+- <strong>Structure</strong>: Create a straightforward list of terms with clear definitions.</p>
+<p><strong>Benefits</strong>:
+- <strong>Ease of Use</strong>: Simple to create and manage.
+- <strong>Foundation</strong>: Provides a foundational understanding of key terms.
+- <strong>Quick Implementation</strong>: Allows for immediate improvement in consistency and clarity of metadata.</p>
+<p><strong>Use Cases</strong>:
+- <strong>Early Project Stages</strong>: When starting a new project or system where the primary goal is to standardize terminology.
+- <strong>Training and Education</strong>: Helps new team members or users quickly understand the basic terms and definitions.</p>
+<h3 id="stage-2-thesauri">Stage 2: Thesauri<a class="headerlink" href="#stage-2-thesauri" title="Permanent link">&para;</a></h3>
+<p><strong>Intermediate Implementation</strong>:
+- <strong>Scope</strong>: Expand your vocabulary to include hierarchical and associative relationships.
+- <strong>Purpose</strong>: Improve information retrieval and organization by showing broader, narrower, and related terms.
+- <strong>Structure</strong>: Develop a thesaurus that includes synonyms, broader terms (BT), narrower terms (NT), and related terms (RT).</p>
+<p><strong>Benefits</strong>:
+- <strong>Enhanced Search</strong>: Improves search accuracy by including synonyms and related concepts.
+- <strong>Better Organization</strong>: Provides a more structured and interconnected view of your terms.
+- <strong>Scalability</strong>: Allows for the gradual addition of new terms and relationships.</p>
+<p><strong>Use Cases</strong>:
+- <strong>Growing Projects</strong>: As your project or system grows and the need for more detailed metadata relationships emerges.
+- <strong>Information Retrieval Systems</strong>: When enhancing search functionalities and user experience is a priority.</p>
+<h3 id="stage-3-ontologies">Stage 3: Ontologies<a class="headerlink" href="#stage-3-ontologies" title="Permanent link">&para;</a></h3>
+<p><strong>Advanced Implementation</strong>:
+- <strong>Scope</strong>: Develop a comprehensive and formal representation of your domain knowledge.
+- <strong>Purpose</strong>: Facilitate complex data integration, interoperability, and advanced reasoning.
+- <strong>Structure</strong>: Create an ontology with detailed concepts, relationships, properties, and logical rules.</p>
+<p><strong>Benefits</strong>:
+- <strong>Semantic Interoperability</strong>: Ensures data consistency and integration across different systems and platforms.
+- <strong>Advanced Reasoning</strong>: Supports sophisticated queries and inference capabilities.
+- <strong>Detailed Knowledge Representation</strong>: Provides a rich and nuanced understanding of domain concepts and their interrelationships.</p>
+<p><strong>Use Cases</strong>:
+- <strong>Complex Systems</strong>: For projects requiring detailed and formal knowledge representation, such as in AI, machine learning, and the Semantic Web.
+- <strong>Interoperable Data Systems</strong>: When integrating diverse data sources and ensuring seamless interoperability is essential.</p>
+<h3 id="evolution-strategy">Evolution Strategy<a class="headerlink" href="#evolution-strategy" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Assessment</strong>: Regularly assess your metadata needs and the complexity of your data.</li>
+<li><strong>Incremental Development</strong>: Start with a simple dictionary and incrementally enhance it to a thesaurus and eventually an ontology.</li>
+<li><strong>Stakeholder Involvement</strong>: Involve stakeholders and subject matter experts at each stage to ensure the vocabulary meets user needs.</li>
+<li><strong>Training and Documentation</strong>: Provide training and documentation to help users adapt to each stage of the vocabulary’s evolution.</li>
+<li><strong>Feedback and Iteration</strong>: Continuously gather feedback and iterate on the vocabulary to improve its accuracy and usefulness.</li>
+</ol>
+<h3 id="example-evolution-path">Example Evolution Path<a class="headerlink" href="#example-evolution-path" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Simple Vocabulary Dictionary</strong>:</li>
+<li>Define basic terms for a new digital library.</li>
+<li>
+<p>Ensure all team members use consistent terminology.</p>
+</li>
+<li>
+<p><strong>Thesaurus</strong>:</p>
+</li>
+<li>Expand the dictionary to include hierarchical relationships between terms (e.g., broader and narrower terms for different types of documents).</li>
+<li>
+<p>Improve search functionality by adding synonyms and related terms.</p>
+</li>
+<li>
+<p><strong>Ontology</strong>:</p>
+</li>
+<li>Develop an ontology to represent complex relationships between documents, authors, subjects, and related concepts.</li>
+<li>Enable advanced search and data integration with other digital libraries and research databases.</li>
+</ol>
+<p>By following this gradual evolution, you can systematically enhance your metadata management capabilities, ensuring your system remains adaptable and meets the growing complexity of your data and user needs.</p>
+<hr />
+<p><font size="-1">Generated by chatGPT 3.5 - May 24, 2024</font></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      INRAE, 2022-2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../js/jquery-2.1.1.min.js"></script>
+      
+        <script src="../../js/lightbox.min.js"></script>
+      
+        <script src="../../js/mermaid.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

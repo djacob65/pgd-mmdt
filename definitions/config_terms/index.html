@@ -1,0 +1,1249 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Maggot, Metadata aggregation on data storage">
+      
+      
+        <meta name="author" content="Daniel Jacob">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Maggot - Terminlogy Definition - Maggot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/pdfextra.css">
+    
+      <link rel="stylesheet" href="../../css/lightbox.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#terminlogy-definition" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Maggot" class="md-header__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maggot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Maggot - Terminlogy Definition
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Maggot" class="md-nav__button md-logo" aria-label="Maggot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Maggot
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorial/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Quick tutorial
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quick tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/describe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Entry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Definition files
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Definition files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json-ld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON-LD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oai-pmh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAI-PMH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dictionaries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dictionaries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../publish/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Publication
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Publication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publish/dataverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publish/zenodo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zenodo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="terminlogy-definition">Terminlogy Definition<a class="headerlink" href="#terminlogy-definition" title="Permanent link">&para;</a></h1>
+<style>.md-typeset h1 {display: none;} .md-nav__item {font-size: medium}</style>
+
+<style>.md-typeset table:not([class]) th {
+    background-color: var(--md-default-fg-color--light);
+    color: var(--md-default-bg-color); min-width: 5rem; padding: 0.9375em 1.25em; vertical-align: top;}</style>
+
+<h3 id="example-of-a-terminlogy-definition-file">Example of a Terminlogy Definition file<a class="headerlink" href="#example-of-a-terminlogy-definition-file" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Section</th>
+<th>Required</th>
+<th>Search</th>
+<th>ShortView</th>
+<th>Type</th>
+<th>features</th>
+<th>Label</th>
+<th>Predefined terms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>definition</td>
+<td>Y</td>
+<td>N</td>
+<td>1</td>
+<td>textbox</td>
+<td>width=350px</td>
+<td>Short name</td>
+<td></td>
+</tr>
+<tr>
+<td>fulltitle</td>
+<td>definition</td>
+<td>Y</td>
+<td>Y</td>
+<td>2</td>
+<td>textbox</td>
+<td></td>
+<td>Full title</td>
+<td></td>
+</tr>
+<tr>
+<td>subject</td>
+<td>definition</td>
+<td>Y</td>
+<td>Y</td>
+<td></td>
+<td>checkbox</td>
+<td>open=0</td>
+<td>Subject</td>
+<td>Agricultural Sciences,Arts and Humanities,Astronomy and Astrophysics,Business and Management,Chemistry,Computer and Information Science,Earth and Environmental Sciences,Engineering,Law,Mathematical Sciences,Medicine Health and Life Sciences,Physics,Social Sciences,Other</td>
+</tr>
+<tr>
+<td>description</td>
+<td>definition</td>
+<td>Y</td>
+<td>Y</td>
+<td></td>
+<td>areabox</td>
+<td>rows=6,cols=30</td>
+<td>Description of the dataset</td>
+<td></td>
+</tr>
+<tr>
+<td>note</td>
+<td>definition</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>areabox</td>
+<td>rows=4,cols=30</td>
+<td>Notes</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td>3</td>
+<td>dropbox</td>
+<td>width=350px</td>
+<td>Status of the dataset</td>
+<td>Processed,In progress,Unprocessed</td>
+</tr>
+<tr>
+<td>access_rights</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td>4</td>
+<td>dropbox</td>
+<td>width=350px</td>
+<td>Access rights to data</td>
+<td>Public,Mixte,Private</td>
+</tr>
+<tr>
+<td>language</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>checkbox</td>
+<td>open=0</td>
+<td>Language</td>
+<td>Czech,Danish,Dutch,English,Finnish,French,German,Greek,Hungarian,Icelandic,Italian,Lithuanian,Norwegian,Romanian,Slovenian,Spanish,Swedish</td>
+</tr>
+<tr>
+<td>lifeCycleStep</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=lifecycle,min=1</td>
+<td>Life cycle step</td>
+<td></td>
+</tr>
+<tr>
+<td>license</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>textbox</td>
+<td>autocomplete=license,min=1</td>
+<td>License</td>
+<td></td>
+</tr>
+<tr>
+<td>datestart</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>datebox</td>
+<td>width=350px</td>
+<td>Start of collection</td>
+<td></td>
+</tr>
+<tr>
+<td>dateend</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>datebox</td>
+<td>width=350px</td>
+<td>End of collection</td>
+<td></td>
+</tr>
+<tr>
+<td>dmpid</td>
+<td>status</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>textbox</td>
+<td></td>
+<td>DMP identifier</td>
+<td></td>
+</tr>
+<tr>
+<td>contacts</td>
+<td>management</td>
+<td>Y</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=people,min=1</td>
+<td>Contacts</td>
+<td></td>
+</tr>
+<tr>
+<td>authors</td>
+<td>management</td>
+<td>Y</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=people,min=1</td>
+<td>Authors</td>
+<td></td>
+</tr>
+<tr>
+<td>collectors</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=people,min=1</td>
+<td>Data collectors</td>
+<td></td>
+</tr>
+<tr>
+<td>curators</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=people,min=1</td>
+<td>Data curators</td>
+<td></td>
+</tr>
+<tr>
+<td>members</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=people,min=1</td>
+<td>Project members</td>
+<td></td>
+</tr>
+<tr>
+<td>leader</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=people,min=1</td>
+<td>Project leader</td>
+<td></td>
+</tr>
+<tr>
+<td>wpleader</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=people,min=1</td>
+<td>WP leader</td>
+<td></td>
+</tr>
+<tr>
+<td>depositor</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>textbox</td>
+<td></td>
+<td>Depositor</td>
+<td></td>
+</tr>
+<tr>
+<td>producer</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=producer,min=1</td>
+<td>Producer</td>
+<td></td>
+</tr>
+<tr>
+<td>grantNumbers</td>
+<td>management</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=grant,min=1</td>
+<td>Grant Information</td>
+<td></td>
+</tr>
+<tr>
+<td>kindOfData</td>
+<td>descriptors</td>
+<td>Y</td>
+<td>Y</td>
+<td></td>
+<td>checkbox</td>
+<td>open=0</td>
+<td>Kind of Data</td>
+<td>Audiovisual,Collection,Dataset,Event,Image,Interactive Resource,Model,Physical Object,Service,Software,Sound,Text,Workflow,Other</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=bioportal,onto=EFO:JERM:EDAM:MS:NMR:NCIT:OBI:PO:PTO:AGRO:ECOCORE:IOBC:NCBITAXON</td>
+<td>Keywords</td>
+<td></td>
+</tr>
+<tr>
+<td>topics</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=VOvocab</td>
+<td>Topic Classification</td>
+<td></td>
+</tr>
+<tr>
+<td>dataOrigin</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>checkbox</td>
+<td>open=0</td>
+<td>Data origin</td>
+<td>observational data,experimental data,survey data,analysis data,text corpus,simulation data,aggregate data,audiovisual corpus,computer code,Other</td>
+</tr>
+<tr>
+<td>experimentfactor</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=vocabulary,min=1</td>
+<td>Experimental Factor</td>
+<td></td>
+</tr>
+<tr>
+<td>measurement</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=vocabulary,min=1</td>
+<td>Measurement type</td>
+<td></td>
+</tr>
+<tr>
+<td>technology</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>multiselect</td>
+<td>autocomplete=vocabulary,min=1</td>
+<td>Technology type</td>
+<td></td>
+</tr>
+<tr>
+<td>publication_citation</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>areabox</td>
+<td>rows=5,cols=30</td>
+<td>Publication - Citation</td>
+<td></td>
+</tr>
+<tr>
+<td>publication_idtype</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>dropbox</td>
+<td>width=200px</td>
+<td>Publication - ID Type</td>
+<td>-,ark,arXiv,bibcode,doi,ean13,eissn,handle,isbn,issn,istc,lissn,lsid,pmid,purl,upc,url,urn</td>
+</tr>
+<tr>
+<td>publication_idnumber</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>textbox</td>
+<td>width=400px</td>
+<td>Publication - ID Number</td>
+<td></td>
+</tr>
+<tr>
+<td>publication_url</td>
+<td>descriptors</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>textbox</td>
+<td></td>
+<td>Publication - URL</td>
+<td></td>
+</tr>
+<tr>
+<td>comment</td>
+<td>other</td>
+<td>N</td>
+<td>Y</td>
+<td></td>
+<td>areabox</td>
+<td>rows=15, cols=30</td>
+<td>Additional information</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      INRAE, 2022-2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../js/jquery-2.1.1.min.js"></script>
+      
+        <script src="../../js/lightbox.min.js"></script>
+      
+        <script src="../../js/mermaid.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
